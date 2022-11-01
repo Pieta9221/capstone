@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LM Tech Hub</title>
+
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="images/favicon.png">   
+   <link href="https:fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">       -->
+  </head>
+  <body>
+    <section class="head">
+      <nav>
+        <a href="index.html"><img src="images/logo.png"/></a>
+        <div class="nav-links" id="nav-links">
+          <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+            <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li class="active"><a href="register.html">REGISTER</a></li>
+            <li><a href="dashboard.html">DASHBOARD</a></li>
+            
+              
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+          
+      </nav>
+      
+       <section class="form">
+        <h1 class="r">Registration Form</h1>
+         <div class="reg">
+          <form method = "post" action="#" class="fill" >
+            <div class="name">
+              <label for="passport">Upload Your Passport</label> </br>
+              <input type="file" class="pass" name="passport" accept="image/jpg" required/>
+            </div>
+
+            <div class="name">
+              <label for="fname">First Name</label> </br>
+              <input type="text" name="fname" placeholder="Input your first name" required/>
+            </div>
+
+            <div class="name">
+              <label for="lname">Last Name</label> </br>
+              <input type="text" name="lname" placeholder="Input your last name" required/>
+            </div>
+            
+            <div class="name">
+              <label for="gender">Gender</label> </br>
+              <!-- <div id="p">
+                <input type="radio" id="gender" name="gender" value="Male"/>Male</br>
+                <input type="radio" id="gender" name="gender" value="Female"/> Female
+              </div> -->
+              <select type="select" id="gender" name="gender" class="sel"> 
+                <option value="nothing">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                
+              </select> 
+            </div>
+
+            <div class="name">
+              <label for="pword">Password</label> </br>
+              <input type="password" name="pword" placeholder="Create a password" required/>
+            </div>
+
+            <div class="name">
+              <label for="p_word">Confirm Password</label> </br>
+              <input type="password" name="p_word" placeholder="Retype your password" required/>
+            </div>
+                                   
+            <div class="name">
+              <label for="phone">Phone Number</label> </br>
+                <input type="tel" name="phone" placeholder="Input your phone number" required/>
+            </div>
+                         
+            <div class="name">
+              <label for="email">Email Address</label> </br>  
+              <input type="email" name="email" placeholder="Input your email address" required/>
+              
+            </div>
+
+            <div class="name">
+              <label for="dob">Date of Birth</label> </br>
+              <input type="date" name="dob" placeholder="Input your date of birth" required/>
+            </div>
+                      
+            
+            <div class="name">
+              <label for="sorigin">State of Origin</label> </br>
+              <select type="select" id="sorigin" name="sorigin" class="sel"> 
+                  <option value="nothing">Select State</option>
+                  <option value="Abia">Abia</option>
+                  <option value="Adamawa">Adamawa</option>
+                  <option value="Akwa Ibom">Akwa Ibom</option>
+                  <option value="Anambra">Anambra</option>
+                  <option value="Bauchi">Bauchi</option>
+                  <option value="Bayelsa">Bayelsa</option>
+                  <option value="Benue">Benue</option>
+                  <option value="Borno">Borno</option>
+                  <option value="Cross River">Cross River</option>
+                  <option value="Delta">Delta</option>
+                  <option value="Ebonyi">Ebonyi</option>
+                  <option value="Edo">Edo</option>
+                  <option value="Ekiti">Ekiti</option>
+                  <option value="Enugu">Enugu</option>
+                  <option value="Gombe">Gombe</option>
+                  <option value="Imo">Imo</option>
+                  <option value="Jigawa">Jigawa</option>
+                  <option value="Kaduna">Kaduna</option>
+                  <option value="Kano">Kano</option>
+                  <option value="Katsina">Katsina</option>
+                  <option value="Kebbi">Kebbi</option>
+                  <option value="Kogi">Kogi</option>
+                  <option value="Kwara">Kwara</option>
+                  <option value="Lagos">Lagos</option>
+                  <option value="Nasarawa">Nasarawa</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Ogun">Ogun</option>
+                  <option value="Ondo">Ondo</option>
+                  <option value="Osun">Osun</option>
+                  <option value="Oyo">Oyo</option>
+                  <option value="Plateau">Plateau</option>
+                  <option value="Rivers">Rivers</option>
+                  <option value="Sokoto">Sokoto</option>
+                  <option value="Taraba">Taraba</option>
+                  <option value="Yobe">Yobe</option>
+                  <option value="Zamfara">Zamfara</option>
+               </select>
+            </div>
+            
+            <div class="name">
+              <label for="address">Address</label> </br>
+              <input type="text" name="address" placeholder="Input your address" required/>
+            </div>
+
+            <div class="name">
+              
+                <label for="course">Select Your Learning Track</label> </br>
+                
+                <select type="select" id="course" name="course" class="sel"> 
+                  <option value="nothing">Select Course</option>
+                  <option value="Product Design">Product Design</option>
+                  <option value="Front-end Web Development">Front-end Development</option>
+                  <option value="Back-end Web Development">Back-end Development</option>
+                  
+                </select>  
+            </div>
+
+            <div class="name">
+              <label for="bio">Tell us a bit about yourself and why you want to join the program</label> </br>
+              <textarea name="bio" id="bio" cols="120" rows="3"></textarea>
+            </div>
+                    
+          
+            </br><a href="#popup1" class="btn">REGISTER</a>
+          </form>
+        </div>   
+            
+      </section>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Hey there!</h2>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            You have successfully registered. Kindly close the window and login to your dashboard to take the quiz.
+          </div>
+        </div>
+      </div>
+      <!--Footer -->
+      <section class="footer">
+        <div class="row">
+          <div class="footer-col">
+              <h3 >About us</h3>
+              <p>We are a community focused on empowering youths with technical and soft skills. It is a 6-month training program with an emphasis on front-end and back-end web development.We provide a platform for students to cultivate new ideas, collaborate and create innovative solutions for Nigeria and the world at large. </p>
+              
+          </div>   
+            
+          <div class="footer-col">
+              <h3>Connect with us</h3>
+              <p><i class="fa-solid fa-phone"></i>&nbsp; +234 803 315 0441</p>
+              <p><i class="fa-solid fa-location-dot"></i>&nbsp; &nbsp;105 Zik Avenue, Awka, Anambra State, Nigeria</p>
+              <p><i class="fa-regular fa-envelope"></i> &nbsp; info@lmtechub.org</p>
+              <h3>Follow us on our social media platforms</h3>
+              <div class="icons"> 
+                <a href="#" ><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="#" ><i class="fa-brands fa-youtube fa-lg"></i></a>
+              </div> 
+          </div> 
+        
+        <div class="footer-col">
+                <h3>How can we help you?</h3>
+                <form action="">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="name" name="email" required>
+        
+                  <label for="message">Message</label>
+                  
+                  <textarea name="message" id="message" cols="10" rows="3"></textarea>
+        
+                  <input type="submit" class="submit" value="SEND MESSAGE">
+                </form>            
+            </div>
+          </div>
+        
+      </div>
+          
+    </section>
+
+      <!--Copyright-->
+      <section class="copyright">
+          <p class="copy">&copy 2022 LM Tech Hub</p>
+          <a href="#" class="back-home top"><i class="fa fa-arrow-circle-o-up fa-lg"></i></a>
+
+      </section>
+
+    <!--Site JS-->
+    <script src="main.js"></script>
+
+         
+  </body>
+</html>
