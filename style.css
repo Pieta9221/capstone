@@ -1071,7 +1071,7 @@ h5{
   content: attr(data-title);
   position: absolute;
   top: calc(100% + 0.5rem);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: #666;
 }
 
@@ -1082,12 +1082,19 @@ h5{
 
 /* Form */
 .form {
-  width: clamp(320px, 50%, 430px);
+  max-width: 40%;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 0.35rem;
   padding: 1.5rem;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width: 700px){
+  .form {
+    max-width: 75%;
+  }  
+  
 }
 
 .form-step {
@@ -1196,7 +1203,7 @@ input[type=date]{
   content: attr(data-title);
   position: absolute;
   top: calc(100% + 0.5rem);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: #666;
 }
 
@@ -1205,7 +1212,7 @@ input[type=date]{
   color: #f3f3f3;
 }
 .null{
-  height: 80px;
+  height: 30px;
 }
 
 
