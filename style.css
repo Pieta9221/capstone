@@ -1082,7 +1082,7 @@ h5{
 
 /* Form */
 .form {
-  width: clamp(320px, 60%, 430px);
+  width: clamp(320px, 50%, 430px);
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 0.35rem;
