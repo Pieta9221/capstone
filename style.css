@@ -785,7 +785,7 @@ input[type = "radio"]{
 
 @media(max-width: 700px){
   .lay{
-   width: 40%;
+   width: 50%;
  }
  
 
@@ -806,15 +806,6 @@ input[type = "radio"]{
    
   
 }
-
-/* @media(max-width: 700px){
-  .boxes{
-    width: 70%;
-
-  }
-  
-} */
-
 
 .boxes a{
   text-decoration: none;
@@ -995,9 +986,9 @@ h5{
 
 
 
-.board img {
+.profile img {
   /* Shrinks images to fit container */
-  max-width: 90%;
+  max-width: 100%;
   
 }
 
