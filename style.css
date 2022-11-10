@@ -19,7 +19,7 @@
 .head {
   height: 120px;
   width: 100%;
-  background-color: #202a44;
+  background-color: #003865;
   position: absolute;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
@@ -116,11 +116,11 @@ nav .fa{
     display: none;
   }   
   .nav-links ul li :hover{
-    color: #202a44;
+    color: #003865;
   }
 
   .nav-links ul li.active a{
-    color: #202a44;
+    color: #003865;
   }
  
   nav .fa{
@@ -146,7 +146,7 @@ nav .fa{
 h1{
   font-size: 36px;
   font-weight: 600;
-  color:#202a44;
+  color:#003865;
 } 
 p{
   color: rgb(2, 2, 2);
@@ -217,7 +217,8 @@ h3{
 }
 .facilities-col img{
   width: 100%;
-  border-radius: 10px;
+  height: 320px;
+  border-radius: 5px;
 }
 .facilities-col p{
   padding: 0;
@@ -265,13 +266,13 @@ h3{
   text-align: left;
 }
 .testimonial-col .fa{
-  color: #0494f7
+  color: #f76704;
 }
 .testimonial-col .fa-regular{
-  color: #0494f7
+  color: #f76704;
 }
 .testimonial-col .fa-solid{
-  color: #0494f7
+  color: #f76704;
 }
 .fa-regular{
   color: #f76704;
@@ -289,7 +290,7 @@ h3{
 }
 
 .icons .fa-brands{
-  color: #fff;
+  color: #f76704;
   margin-right: 5px;
   cursor: pointer;
   padding: 2px 0;
@@ -298,7 +299,8 @@ h3{
   width: 100%;
   text-align: center;
   padding: 0;
-  background-color: #202a44;
+  border-top: 1px solid #fafafa;
+  background-color: #003865;
 }
 @media(max-width: 700px) {
   .copyright{
@@ -332,8 +334,8 @@ h3{
   color: #fff;
   border: 1px solid #f76704;
   border-radius: 5px;
-  margin-top: 30px;
-  padding: 12px 30px;
+  margin-top: 20px;
+  padding: 12px 20px;
   font-size: 16px;
   background: #f76704;
   position: relative;
@@ -344,7 +346,7 @@ h3{
 }
 .btn:hover{
   border: none;
-  background-color: #202a44;
+  background-color: #003865;
   border-radius: 5px;
   transition: 1s;
   color: #fff;
@@ -352,13 +354,13 @@ h3{
 }
 
 .but{
-  /*display: inline-block;*/
-  text-decoration: underline;
+  /* display: inline-block; */
+  text-decoration: none;
   text-align: center;
   color:  #0494f7;
   /* border: 2px solid #f76704; */
   /* border-radius: 5px; */
-  margin-top: 70px;
+  margin-top: 20px;
   margin-left: 20px;
   padding: 5px 15px 5px 0px;
   font-size: 16px;
@@ -372,8 +374,8 @@ h3{
   /* background: #0494f7; */
   /* border-radius: 5px; */
   transition: 1s;
-  color: #202a44;
-  font-weight: medium;
+  color: #003865;
+  
 }
 .back-home {
   position: fixed;
@@ -393,8 +395,8 @@ h3{
 .footer{
   width: 100%; 
   margin: auto;
-  margin-top: 30px;
-  background-image: linear-gradient(rgba(4,148,247,1.0),rgba(4,148,247,1.0)),url(images/banner2.jpg);
+  /* margin-top: 30px; */
+  background-color: #003865;
   background-position: center;
   background-size: cover;
     
@@ -404,7 +406,7 @@ h3{
   flex-basis: 30%;
   text-align: left;
   border-radius: 10px;
-  margin:2% 5%;
+  margin:3% 5%;
   
 }
 
@@ -418,7 +420,7 @@ h3{
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: left;
-  color:#202a44;
+  color:#fafafa;
 }
 label{
   color: #fff;
@@ -437,12 +439,12 @@ label{
   position: relative;
   cursor: pointer;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
-  font-weight: medium;
+  
 }
 .submit:hover{
   transition: 1s;
-  background-color: #202a44;
-  font-weight: medium;
+  background-color: #f76704;
+  font-size: 17px;
   padding: 8px 34px;
 }
 
@@ -451,13 +453,13 @@ input, textarea {
   width: 100%;
   padding: .3em;
   border-radius: .3em;
-  border: 1px solid gray;
+  border: 1px solid #fafafa;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-/* input:focus, textarea:focus{
-  border: 1px solid #f76704;
-} */
+input:focus, textarea:focus{
+  outline: none;
+}
 
 /* for hero section */
 .dynamic-txt{
@@ -480,14 +482,14 @@ input, textarea {
   width: 75%; 
   margin: auto;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .journey-col{
   flex-basis: 30%;
   text-align: center;
   border-radius: 8px;
   margin-bottom: 7%;
-  border: 3px solid #202a44;
+  border: 3px solid #003865;
   animation: fadeIn 3s;
 } 
 
@@ -507,11 +509,11 @@ input, textarea {
   width: 90%; 
   margin: auto;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 .reg{
-  width: 80%;
+  width: 70%;
   margin: auto;
   /* position: relative; */
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.2);
@@ -537,144 +539,26 @@ input, textarea {
 
 #sub:hover{
   border: none;
-  background-color: #202a44;
+  background-color: #003865;
   border-radius: 5px;
   transition: 1s;
   color: #fff;
   font-weight: medium;
 }
 
-.fill {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  position: relative;
-}
 
-.fill .name{
-  text-align: left;
-}
-.fill input, .log-col input{
+ .log-col input{
   border-radius: 3px;
-  border: 1px solid #0494f7;
-  margin-bottom: 8px;
+  display: block;
+  border: 1px solid #003865;
+  margin-bottom: 2px;
   padding: 5px 10px;
   line-height: 1.5;
   outline: none;
   resize: vertical;
 }
-.fill select{
-  border-radius: 3px;
-  border: 1px solid #0494f7;
-  margin-bottom: 8px;
-  padding: 5px 50px 5px 5px;
-  line-height: 1.5;
-  outline: none;
-  resize: vertical;
-  color:rgba(0, 0, 0, 0.7);
-}
 
-.fill input:focus, .fill select:focus, .log-col input:focus{
-  border: 1px solid #f76704;
-}
 
-.fill textarea:focus{
-  border: 1px solid #f76704;
-}
-::placeholder{
-  opacity: 0.5;
-}
-
-.fill label{
-  color: #202a44;
-  font-weight: 400; 
-}
-
-.fill textarea{
-  color: black;
-  padding: 5px 15px;
-  border-radius: 3px;
-  border: 1px solid #0494f7;
-  font-family: 'Poppins';
-  outline: none;
-}
-::file-selector-button{
-  color: #fff;
-  border: 1px solid #f76704;
-  border-radius: 2px;
-  padding: 3px 5px;
-  background: #f76704;
-  position: relative;
-  cursor: pointer; 
-}
-
-#gender, #courses{
-  accent-color:#f76704;
-  
-}
-#p {
-  color: #0494f7;
-  
-}
-
-input[type=date]{
-  color: rgba(0, 0, 0, 0.5);
-}
-/* popup after registering */
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 50%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #202a44;
-  font-family: 'Poppins';
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #0494f7;
-}
-.popup .close:hover {
-  color: #f76704
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-
-@media screen and (max-width: 700px){
-   .popup{
-    width: 50%;
-  }
-}
 
 
 /* login page */
@@ -684,19 +568,22 @@ input[type=date]{
   text-align: center;
   border-radius: 8px;
   margin: auto;
-  border: 3px solid #202a44;
+  border: 3px solid #003865;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
-  padding: 50px;
+  padding: 30px;
 } 
 
-.log-col:hover{
-  
-  border: 3px solid #f76704;
-  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+.log-col input{
+  width: 95%;
   
 }
+.log-col a{
+  display: block;
+}
+
+
 .log{
-  width: 50%; 
+  width: 60%; 
   margin: auto;
   text-align: center;
   padding-top: 150px;
@@ -717,7 +604,7 @@ input[type=date]{
   text-align: center;
   border-radius: 8px;
   margin: auto;
-  border: 3px solid #202a44;
+  border: 3px solid #003865;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
   padding: 10px 30px;
   
@@ -731,7 +618,7 @@ input[type=date]{
 }
 
 .quiz-col h3{
-  color:#202a44;
+  color:#003865;
 }
 
 #radio-container{
@@ -745,7 +632,7 @@ input[type=date]{
 
 .radio-labels{
   height: 16px;
-  color: #202a44;
+  color: #003865;
   
 }
 
@@ -765,7 +652,7 @@ input[type = "radio"]{
   margin-top: 20px;
   margin-bottom: 0px;
   font-size: 16px;
-  color: #202a44;
+  color: #003865;
   font-weight: 600;
 }
 
@@ -827,7 +714,7 @@ input[type = "radio"]{
 
 .pop p {
   margin-top: 0;
-  color: #202a44;
+  color: #003865;
   font-family: 'Poppins';
 }
 .pop .close {
@@ -843,7 +730,7 @@ input[type = "radio"]{
   margin-bottom: 10%;
 }
 .pop .close:hover {
-  color: #202a44;
+  color: #003865;
 }
 .stat p{
   color: #fff;
@@ -873,7 +760,7 @@ input[type = "radio"]{
 }
 
 .bar:hover{
-  background-color: #202a44;
+  background-color: #003865;
   
   border-radius: 3px;
   
@@ -887,11 +774,11 @@ input[type = "radio"]{
   font-size: 16px;
 }
 .stat a:hover{
-  color: #202a44;
+  color: #003865;
 }
 
 .stat a:active{
-  color: #202a44;
+  color: #003865;
 }
 
 
@@ -998,13 +885,14 @@ input[type = "radio"]{
   font-weight: 400;
   /* line-height: 22px; */
   padding: 10px;
+  text-align: justify;
 }
 
 .about{
   width: 80%; 
   margin: auto;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 150px;
 }
 
 .about-col{
@@ -1023,7 +911,7 @@ input[type = "radio"]{
 
 .about-col h2, .about-col h1{
   text-align: center;
-  color: #202a44;
+  color: #003865;
   line-height: 1.2;
 }
 
@@ -1038,7 +926,7 @@ input[type = "radio"]{
 
 .about-col img{
   width: 100%;
-  border: 2px solid #202a44;
+  border: none;
   border-radius: 5px;
   animation: fadeIn 3s;
 }
@@ -1057,14 +945,15 @@ input[type = "radio"]{
 }
 .team-col img{
   width: 100%;
+  border-radius: 5px;
   /* background-color: rgba(4,148,247,1); */
-  background-color: #202a44;
+  background-color: #003865;
   
 }
 
 .team-col h3{
   text-align: center;
-  color: #202a44;
+  color: #003865;
   line-height:1.0;
   
 }
@@ -1080,7 +969,7 @@ h5{
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  background-color: #202a44;
+  background-color: #003865;
   width: 100%;
   position: relative;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
@@ -1111,3 +1000,212 @@ h5{
   max-width: 90%;
   
 }
+
+
+
+/*Form Page */
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #003865;
+  font-weight: 400;
+  text-align: left;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #003865;
+  border-radius: 0.25rem;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 97%;
+  background-color: #003865;
+  z-index: -1;
+}
+
+.progress {
+  background-color: #003865;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #003865;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: #f76704;
+  color: #003865;
+}
+
+/* Form */
+.form {
+  width: clamp(320px, 60%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.log-col input:focus, .input-group input:focus, .input-group select:focus {
+  border: 1px solid #f76704;
+}
+
+.input-group textarea:focus{
+  border: 1px solid #f76704;
+}
+::placeholder{
+  opacity: 0.5;
+}
+
+
+::file-selector-button{
+  color: #fff;
+  border: 1px solid #f76704;
+  border-radius: 2px;
+  padding: 3px 5px;
+  background: #f76704;
+  position: relative;
+  cursor: pointer; 
+}
+
+/* #gender, #courses{
+  accent-color:#f76704;
+  
+} */
+
+
+input[type=date]{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.butns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.butn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: #f76704;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.butn:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
+  background-color: #003865;
+}
+
+
+.progress {
+  background-color: #003865;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: #f76704;
+  color: #f3f3f3;
+}
+.null{
+  height: 80px;
+}
+
+
