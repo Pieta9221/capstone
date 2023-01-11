@@ -1,0 +1,9 @@
+  alternate pic
+  <?php
+        
+        if($_SESSION['user_logged_in'] == 1){
+          <img src="../pic/profile.png" width="60px" height="60px"/>
+        } else{
+          <img src="../pic/profile.png" width="60px" height="60px"/>
+        }
+  ?>

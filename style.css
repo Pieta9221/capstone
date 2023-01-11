@@ -1009,6 +1009,7 @@ h5{
   padding: 0.75rem;
   border: 1px solid #003865;
   border-radius: 0.25rem;
+  outline: none;
 }
 
 
@@ -1017,6 +1018,10 @@ h5{
 }
 
 /* Progressbar */
+
+label span{
+  color: #ff0000;
+}
 .progressbar {
   position: relative;
   display: flex;
@@ -1105,8 +1110,11 @@ h5{
 .input-group textarea:focus{
   border: 1px solid #f76704;
 }
+
+
+
 ::placeholder{
-  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -1120,15 +1128,23 @@ h5{
   cursor: pointer; 
 }
 
-/* #gender, #courses{
-  accent-color:#f76704;
-  
-} */
-
-
-input[type=date]{
-  color: rgba(0, 0, 0, 0.5);
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
 }
+
+
 
 .input-group {
   margin: 2rem 0;
@@ -1150,11 +1166,15 @@ input[type=date]{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+ 
 }
+
+
 
 .butn {
   padding: 0.75rem;
   display: block;
+  font-size: 1rem;
   text-decoration: none;
   background-color: #f76704;
   color: #fff;
@@ -1162,6 +1182,9 @@ input[type=date]{
   border-radius: 0.25rem;
   cursor: pointer;
   transition: 0.3s;
+  border: none;
+  
+  
 }
 .butn:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
