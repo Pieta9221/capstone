@@ -18,25 +18,31 @@
 
   if($res->num_rows === 1){
     $row = $res->fetch_array();
-    $_SESSION['user'] = $row['fname'];
+    $_SESSION['fname'] = $row['fname'];
     $_SESSION['user_logged_in'] = 1;
-    $_SESSION['pic'] = $row['passport'];
+    $_SESSION['passport'] = $row['passport'];
+    $_SESSION['dob'] = $row['dob'];
     header('location:users/student/dashboard.php');
   } 
   else{
     $query2  = "SELECT * FROM admindata WHERE email = '$email' && pword = '$pword2'";
     $res2 = $conn->query($query2);
     if($res2->num_rows === 1){
-      $row = $res2->fetch_array();  
-      $_SESSION['user'] = $row['fname'];
+      $rows = $res2->fetch_array();  
+      $_SESSION['fname'] = $rows['fname'];
       $_SESSION['user_logged_in'] = 1;
-      $_SESSION['pic'] = $row['passport'];
-    header('location:users/admin/dashboard.php');
-    } else{
-    echo "<h2>Invalid login details! </h2>";
-    include("sign.html");
-    exit();
+      $_SESSION['passport'] = $rows['passport'];
+      if($rows['status'] == "Admin"){
+        header('location:users/admin/dashboard.php');
+      } else if($rows['status'] == "Tutor"){
+        header('location:users/admin/dashboard.php');
+      }
+    } else{  
+      echo "<h2>Invalid login details! </h2>";
+      include("sign.html");
+      exit();
     }
+    
   }
   
  

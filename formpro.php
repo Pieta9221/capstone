@@ -5,7 +5,6 @@
   
   $config = new mysqli ($host, $user, $pwd, $database);
 
-  
     $fname = $_POST['fname'];
     $email = $_POST['email'];
     $dob = $_POST['dob'];
@@ -18,6 +17,7 @@
     $pword = $_POST['pword'];
     $pword2 = $_POST['pword2'];
     $pword3 = md5($pword);
+    
     
     $photoname =$_FILES['passport']['name']; 
     $phototype = $_FILES['passport']['type'];

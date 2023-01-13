@@ -1,6 +1,7 @@
 <?php
   $url = $_SERVER['PHP_SELF'];
 ?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -26,15 +27,16 @@
     </div>
     
     <div class="sidebar-menu">
-    <ul>
-      <li><a href="dashboard.php" class="<?php echo str_ends_with($url, '/student/dashboard.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-gauge fa-lg"></i></span><span>Dashboard</a></li>
-      <li><a href="profile.php" class="<?php echo str_ends_with($url, '/student/profile.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-user fa-lg"></i></span><span>My Profile</a></li>
-      <li><a href="settings.php" class="<?php echo str_ends_with($url, '/student/settings.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-gears fa-lg"></i></span><span>Settings</a></li>
-      <li><a href="support.php" class="<?php echo str_ends_with($url, '/student/support.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-circle-question fa-lg"></i></span><span>Help & Support</a></li>
-            
-      <li><a href="logout.php" class="<?php echo str_ends_with($url, '/student/logout.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i></span><span>Logout</span></a></li>      
-    </ul>
-    </div>
+      <ul>
+        <li><a href="dashboard.php" class="<?php echo str_ends_with($url, '/admin/dashboard.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-gauge fa-lg"></i></span><span>Dashboard</a></li>
+        <li><a href="addadmin.php" class="<?php echo str_ends_with($url, '/admin/addadmin.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-plus fa-lg"></i></span><span>Add Admin</a></li>
+        <li><a href="profile.php" class="<?php echo str_ends_with($url, '/capstone/profile.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-user fa-lg"></i></span><span>My Profile</a></li>
+        <li><a href="settings.php" class="<?php echo str_ends_with($url, '/capstone/settings.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-gears fa-lg"></i></span><span>Settings</a></li>
+        <li><a href="ticket.php" class="<?php echo str_ends_with($url, '/capstone/support.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-circle-question fa-lg"></i></span><span>Help & Support</a></li>
+              
+        <li><a href="logout.php" class="<?php echo str_ends_with($url, '/capstone/logout.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i></span><span>Logout</span></a></li>      
+      </ul>
+      </div>
   </div>
 
   <div class="main-content">
@@ -53,8 +55,7 @@
         <?php echo "<img src = ".'../'.$_SESSION['passport']." width='60px' height='60px' />"; ?> 
       <div>
           <h3><?php echo $_SESSION['fname']; ?></h3>
-          <small>Student</small>
+          <small>Tutor</small>
         </div>
       </div>
-    </header>
-  
+    </header>  

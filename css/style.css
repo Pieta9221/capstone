@@ -133,6 +133,8 @@ nav .fa{
   .nav-links ul{
     padding: 30px;
   } 
+
+  
 }
  
 
@@ -344,6 +346,23 @@ h3{
   font-weight: medium;
   text-align: center;
 }
+
+.btn-outline{
+  text-decoration: none;
+  color: #f76704;
+  border: 1px solid #f76704;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
+  font-weight: medium;
+  text-align: center;
+}
+.btn-outline:hover,
 .btn:hover{
   border: none;
   background-color: #003865;
@@ -1078,7 +1097,7 @@ label span{
 
 /* Form */
 .form {
-  max-width: 40%;
+  max-width: 60%;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 0.35rem;
@@ -1126,6 +1145,10 @@ label span{
   background: #f76704;
   position: relative;
   cursor: pointer; 
+}
+
+input.invalid-input{
+  border-color: #ff0000;
 }
 
 input:-webkit-autofill,

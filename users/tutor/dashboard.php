@@ -68,16 +68,6 @@ $row = $result -> fetch_array();
         <a href="">
           <div class="card-single">
             <div>
-              <h1>Admissions</h1>
-              <span>Process students admission</span>
-            </div>
-            <div><i class="fa-solid fa-graduation-cap fa-3x"></i></div>
-          </div>
-        </a> 
-
-        <a href="">
-          <div class="card-single">
-            <div>
               <h1>Students</h1>
               <span>List of all students admitted</span>
             </div>
@@ -118,7 +108,7 @@ $row = $result -> fetch_array();
         <a href="">
           <div class="card-single">
             <div>
-              <h1>Grades</h1>
+              <h1>Grade</h1>
               <span>Track students' performance</span>
             </div>
             <div><i class="fa-solid fa-spinner fa-3x"></i></div>

@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LM Tech Hub</title>
 
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./css/style.css">
    <link rel="icon" href="images/favicon.png">   
    <link href="https:fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,22 +54,22 @@
           <div class="form-step form-step-active">
             <div class="input-group">
               <label for="passport">Upload Your Passport</label>
-              <input type="file" class="pass" name="passport" accept="image/jpg" required/>
+              <input type="file" class="pass fill" name="passport" accept="image/*" required/>
             </div>
   
             <div class="input-group">
               <label for="fname">Full Name</label>
-              <input type="text" name="fname" placeholder="Input your full name" required/>
+              <input type="text" name="fname" class="fill" placeholder="Input your full name" required/>
             </div>
   
             <div class="input-group">
               <label for="dob">Date of Birth</label>
-              <input type="date" name="dob" placeholder="Input your dob" required/>
+              <input type="date" name="dob" class="fill" placeholder="Input your dob" required/>
             </div>
             
             <div class="input-group">
                <label for="gender">Gender</label>
-                <select type="select" id="gender" name="gender" class="sel" required> 
+                <select type="select" id="gender" name="gender" class="sel fill" required> 
                 <option value="nothing">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -81,7 +81,7 @@
             <div class="butns-group">
               
               <a href="register.html" class="butn">BACK</a>
-              <a href="#" class="butn btn-next" name="next">NEXT</a>
+              <a href="#" class="butn btn-next">NEXT</a>
             </div>
           </div>
           
@@ -89,17 +89,17 @@
           <div class="form-step">
             <div class="input-group">
               <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" placeholder="Input your phone number" required/>
+                <input type="tel" name="phone" class="fill" placeholder="Input your phone number" required/>
             </div>
 
             <div class="input-group">
               <label for="address">Address</label>
-              <input type="text" name="address" placeholder="Input your home address" required/>
+              <input type="text" class="fill" name="address" placeholder="Input your home address" required/>
             </div>
 
             <div class="input-group">
               <label for="state">State of Origin</label>
-              <select type="select" id="state" name="state" class="sel"> 
+              <select type="select" id="state" name="state" class="sel fill"> 
                   <option value="nothing">Select State</option>
                   <option value="Abia">Abia</option>
                   <option value="Adamawa">Adamawa</option>
@@ -154,7 +154,7 @@
                 
               <label for="course">Select Your Learning Track</label>
               
-              <select type="select" id="course" name="course" class="sel" required> 
+              <select type="select" id="course" name="course" class="sel fill" required> 
                 <option value="nothing">Select Course</option>
                 <option value="Product Design">Product Design</option>
                 <option value="Front-end Web Development">Front-end Development</option>
@@ -165,7 +165,7 @@
   
             <div class="input-group">
               <label for="bio">Tell us a bit about yourself and why you want to join the program</label>
-              <textarea name="bio" id="bio" cols="120" rows="5"  maxlength="1000" placeholder="1000 characters only" required></textarea>
+              <textarea name="bio" id="bio" cols="120" rows="5" class="fill"  maxlength="1000" placeholder="1000 characters only" required></textarea>
             </div>
          
             
@@ -184,12 +184,12 @@
   
             <div class="input-group">
               <label for="pword">Password</label>
-              <input type="password" name="pword" placeholder="Create a password" required/>
+              <input type="password" class="fill" name="pword" placeholder="Create a password" required/>
             </div>
   
             <div class="input-group">
               <label for="pword2">Confirm Password</label>
-              <input type="password" name="pword2" placeholder="Retype your password" required/>
+              <input type="password" class="fill" name="pword2" placeholder="Retype your password" required/>
             </div>
   
   
@@ -259,7 +259,7 @@
       </section>
 
     <!--Site JS-->
-    <script src="main.js"></script>
+    <script src="./js/main.js"></script>
 
          
   </body>

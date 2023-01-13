@@ -14,23 +14,19 @@ document.addEventListener("scroll", () => {
 })
 
  
-
-
-
-
 var navLinks = document.getElementById("nav-links");
 
-      function showMenu() {
-        // navLinks.style.right = "0";
-        navLinks.style.display = "block";
-      }
-      function hideMenu() {
-        //navLinks.style.right = "-200px";
-        navLinks.style.display = "none";
-      }
+function showMenu() {
+  // navLinks.style.right = "0";
+  navLinks.style.display = "block";
+}
+function hideMenu() {
+  //navLinks.style.right = "-200px";
+  navLinks.style.display = "none";
+}
 
 
-      const prevBtns = document.querySelectorAll(".btn-prev");
+const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
 const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
@@ -40,9 +36,15 @@ let formStepsNum = 0;
 
 nextBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    formStepsNum++;
-    updateFormSteps();
-    updateProgressbar();
+    // inputsValid = validateInputs();
+    
+    // if (inputsValid) {
+      formStepsNum++;
+      updateFormSteps();
+      updateProgressbar();
+    // }
+  
+    
   });
 });
 
@@ -78,3 +80,18 @@ function updateProgressbar() {
     ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
 
+// function validateInputs() {
+//   let inputsValid = true;
+
+//   const inputs = document.querySelectorAll(".fill");
+//   for (let i = 0; i < inputs.length; i++) {
+//       const valid = inputs[i].checkValidity();
+//       if (!valid) {
+//           inputsValid = false;
+//           inputs[i].classList.add("invalid-input");
+//       } else {
+//           inputs[i].classList.remove("invalid-input");
+//       }
+//   }
+//   return inputsValid;
+// }
