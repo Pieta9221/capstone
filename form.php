@@ -31,9 +31,9 @@
         <i class="fa fa-bars-staggered" onclick="showMenu()"></i>
           
       </nav>
-      <div class="null" >
+      <div class="null" ></div>
 
-      </div>
+      
       <section>
         <form action="formpro.php" method="POST" enctype="multipart/form-data" class="form">
           <h1 class="text-center">Registration Form</h1>

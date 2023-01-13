@@ -1097,7 +1097,7 @@ label span{
 
 /* Form */
 .form {
-  max-width: 50%;
+  max-width: 40%;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 0.35rem;
@@ -1107,9 +1107,12 @@ label span{
 
 @media(max-width: 700px){
   .form {
-    max-width: 75%;
+    max-width: 80%;
   }  
- 
+  .butns-group {
+    gap: 0.2rem;
+    width: 80%;
+  }
   
 }
 
@@ -1190,7 +1193,7 @@ select:-webkit-autofill:active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
- 
+  width: 100%;
 }
 
 
@@ -1251,6 +1254,10 @@ select:-webkit-autofill:active {
 }
 .null{
   height: 30px;
+  
+}
+.nul{
+  margin-top: 20rem;
 }
 
 
