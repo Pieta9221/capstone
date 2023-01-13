@@ -331,7 +331,7 @@ h3{
 
 /* button */
 .btn{
-  /*display: inline-block;*/
+  display: inline-block;
   text-decoration: none;
   color: #fff;
   border: 1px solid #f76704;
@@ -1097,7 +1097,7 @@ label span{
 
 /* Form */
 .form {
-  max-width: 60%;
+  max-width: 50%;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 0.35rem;
@@ -1109,6 +1109,7 @@ label span{
   .form {
     max-width: 75%;
   }  
+ 
   
 }
 
