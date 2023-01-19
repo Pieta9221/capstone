@@ -47,6 +47,7 @@
 
           $query = "SELECT * FROM studentdata WHERE email = '$email'";
           $res = $config->query($query);
+          
 
           if ($res->num_rows>0){
             echo "$fname, your data already exists";
@@ -54,9 +55,10 @@
           else{
             
             $insert = "INSERT INTO studentdata (fname, email, dob, gender, phone, pword, address, state, course, passport, bio) values ('$fname', '$email', '$dob', '$gender', '$phone', '$pword3', '$address', '$state', '$course', '$filepath', '$bio')";
-
+            $_SESSION['email'] = $email;
             if($config->query($insert)===TRUE){
               echo "$fname, you have successfully registered";
+              header('location:users/student/dashboard.php');
             }
             else{
               echo "Ooops! Problem with registration, try again";

@@ -10,6 +10,7 @@
    <title>Dashboard</title>
    <link rel="stylesheet" href="../.././css/dashboard.css">
    <link rel="stylesheet" href="../.././css/carousel.css">
+   <link rel="stylesheet" href="../.././css/form.css">
    <link rel="icon" href="../inc/favicon.png">   
    <link href="https:fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,9 +51,9 @@
       </div> 
 
       <div class="user-wrapper">
-        <?php echo "<img src = ".'../'.$_SESSION['passport']." width='60px' height='60px' />"; ?> 
+        <?php echo "<img src = ".'../'.$row['passport']." width='60px' height='60px' />"; ?> 
       <div>
-          <h3><?php echo $_SESSION['fname']; ?></h3>
+          <h3><?php echo $row['fname']; ?></h3>
           <small>Student</small>
         </div>
       </div>

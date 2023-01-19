@@ -3,7 +3,8 @@ session_start();
 // include_once("../session.php");
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
-$query  = "SELECT * FROM admindata";
+$email = $_SESSION['email'];
+$query  = "SELECT * FROM admindata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
   
@@ -17,7 +18,7 @@ $row = $result -> fetch_array();
       <div class="recent-grid">
         <div class="card">
           <h3>Welcome back,</h3>
-          <h2><?php echo $_SESSION['fname']; ?></h2>
+          <h2><?php echo $row['fname']; ?></h2>
           <p>Trust you have achieved up to 70% of your daily goals</p>
         </div>
 
@@ -85,11 +86,11 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+        <a href="staff.php">
           <div class="card-single">
             <div>
-              <h1>Tutors</h1>
-              <span>List of all tutors in the hub</span>
+              <h1>Staff</h1>
+              <span>List of all staff in the hub</span>
             </div>
             <div><i class="fa-solid fa-person-chalkboard fa-3x"></i></i></div>
           </div>

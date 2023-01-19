@@ -3,7 +3,8 @@ session_start();
 // include_once("../session.php");
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
-$query  = "SELECT * FROM studentdata";
+$email = $_SESSION['email'];
+$query  = "SELECT * FROM studentdata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
   
@@ -17,7 +18,7 @@ $row = $result -> fetch_array();
       <div class="recent-grid">
         <div class="card">
           <h3>Welcome back,</h3>
-          <h2><?php echo $_SESSION['fname']; ?></h2>
+          <h2><?php echo $row['fname']; ?></h2>
           <p>Trust you have achieved up to 70% of your daily goals</p>
         </div>
 
@@ -131,7 +132,7 @@ $row = $result -> fetch_array();
   </div>
 
   <section class="copyright">
-      <p class="copy">&copy 2022 LM Tech Hub</p>
+      <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
   <script src="../.././js/carousel.js"></script>

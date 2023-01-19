@@ -1,0 +1,161 @@
+:root{
+  --main-color: #f76704;
+  --color-dark: #003865;
+  --text-grey: #8390a2;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif ;
+  line-height: 1.8;
+}
+
+a{
+  text-decoration: none;
+  color:  var(--main-color);
+  font-weight: bold;
+}
+a:hover{
+  color:#ccd6d7;
+}
+
+.container1{
+  margin: 5px auto;
+  max-width: 400px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+.container{
+  margin: 120px auto 70px auto ;
+  max-width: 400px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+.form-wrap{
+ padding: 15px 25px;
+}
+
+.form-wrap h1, 
+.form-wrap p{
+  text-align: center;
+}
+
+.form-wrap h1{
+  color: var(--color-dark);
+}
+
+.form-wrap .form-group{
+  margin-top: 15px;
+}
+.form-wrap .form-group label{
+  display: block;
+  color: var(--text-grey);
+}
+.form-wrap .form-group input,
+.form-wrap .form-group select,
+.form-wrap .form-group textarea{
+  width: 100%;
+  padding: 10px;
+  border: #444 1px solid;
+  border-radius: 5px;
+  outline: none;
+  
+}
+
+.form-wrap button,
+input[type=button]{
+  display: block;
+  background: var(--main-color);
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.form-wrap button:hover{
+  background-color: #003865;
+  border-radius: 5px;
+  transition: 1s;
+  color: #fff;
+  font-weight: medium;
+}
+.form-wrap .bottom-text{
+  font-size: 13px;
+  margin-top: 20px;
+}
+footer{
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+#radio{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  accent-color: var(--main-color);
+ 
+}
+#radio input{
+  outline: none;
+  
+}
+
+#checkbox{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  width: 300px;
+  accent-color: var(--main-color);
+  
+}
+
+.butns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+textarea{
+  font-family: 'Poppins', sans-serif ;
+  color: #000;
+}
+
+::file-selector-button{
+  color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 2px;
+  padding: 3px 5px;
+  background: var(--main-color);
+  cursor: pointer; 
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}

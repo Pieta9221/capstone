@@ -196,9 +196,7 @@
             <div class="butns-group">
               <a href="#" class="butn btn-prev">PREVIOUS</a>
               <button type="submit" name="next" class="butn">SUBMIT</button>
-              <!-- <a href="#" target="_blank" class="butn " type="submit">SUBMIT</a> -->
-              <!-- <a href="dashboard.html" target="_blank" class="butn btn-prev" type="submit">SUBMIT</a> -->
-             
+              
             </div>
           </div>
           
