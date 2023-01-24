@@ -3,10 +3,6 @@ session_start();
 // include_once("../session.php");
 include('connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
-$email = $_SESSION['email'];
-$query  = "SELECT * FROM admindata WHERE email='$email'";
-$result = $conn->query($query);
-$row = $result -> fetch_array();
 
 $id = $_GET['id'];
   
@@ -14,38 +10,52 @@ $id = $_GET['id'];
   $res = $conn->query($query);
   $rows = $res->fetch_array();
 
-  if($result->num_rows == 0){
+  if($res->num_rows == 0){
     echo "Data not found";
   } else{  
  
 ?>
 
 
-    <?php 
-      include('nav.php');
-    ?>
-    
-    <main>
-      <div class="recent">
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Admin Profile</title>
+   <link rel="stylesheet" href="../.././css/dashboard.css">
+   <link rel="icon" href="../inc/favicon.png">   
+   <link href="https:fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   
+      
+  </head>
+<body>
+  
+    <section class="cop">
+      <h2 class="copy">Admin Profile</h2>
+    </section>
+  
+         <div class="recent">
         <div>
           <div class="user-wrapper">
-            <div>
-              <?php echo "<img src = ".'../'.$rows['passport']." width='100px' height='100px' />"; ?> 
-              <div><a href=""><i class="fa-solid fa-pen"></i></a></div>
-            </div>
+            <?php echo "<img src = ".'../'.$rows['passport']." width='100px' height='100px' />"; ?> 
+              
            <div>
               <h2><?php echo $rows['fname']; ?></h2>
-              <p>Tutor</p>
+              <p><?php echo $rows['status']; ?></p>
             </div>
           </div>
           <br>
           
           <div>
-            <p>COURSE INFORMATION:</p>
+            <p>STAFF INFORMATION:</p>
             <hr>
             <table>
               <tr>
-                <td>Staff Num.:</td>
+                <td>Staff ID:</td>
                 <td>LM12201</td>
               </tr>
               <tr>
@@ -81,12 +91,13 @@ $id = $_GET['id'];
               
       </div>  
   
-    </main>
+
   
-    
+      <br>
+    <br>
     <section class="copyright">
       <p class="copy">&copy; 2022 LM Tech Hub</p>
-  </section>
+    </section>
   
 
 </body>

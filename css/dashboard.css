@@ -277,8 +277,15 @@ main {
 }
 
 .recent td {
-  width: 60%;
+  width: 100%;
   color: #000;
+}
+
+.recent td input {
+  padding: 10px;
+  border: #444 1px solid;
+  border-radius: 5px;
+  outline: none;
 }
 
 .card {
@@ -465,6 +472,15 @@ input:-webkit-autofill:active {
   border-top: 1px solid #fafafa;
   background-color: #003865;
   padding: 5px 0;
+}
+
+.cop {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: #003865;
+  padding: 15px 0;
+  margin-bottom: 10px;
 }
 
 .copy {

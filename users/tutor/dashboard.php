@@ -55,8 +55,8 @@ $row = $result -> fetch_array();
             <div>
             <h3>Our Core Values</h3>
             <p>OPPORTUNITY</p>
-            <p>"In the middle of difficulty lies opportunity."</p>
-            <em><small>-Albert Einstein</small></em>
+            <p>"Nothing is more expensive than a missed opportunity."</p>
+            <em><small>-Jackson Brown</small></em>
             </div>
           </div>
          
@@ -66,7 +66,7 @@ $row = $result -> fetch_array();
       </div>
 
       <div class="cards">
-        <a href="">
+        <a href="student.php">
           <div class="card-single">
             <div>
               <h1>Students</h1>
@@ -76,53 +76,23 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+        <a href="assign.php">
           <div class="card-single">
             <div>
-              <h1>Tutors</h1>
-              <span>List of all tutors in the hub</span>
+              <h1>Assignments</h1>
+              <span>Post assignment to students</span>
             </div>
-            <div><i class="fa-solid fa-person-chalkboard fa-3x"></i></i></div>
+            <div><i class="fa-solid fa-share-from-square fa-3x"></i></div>
           </div>
         </a>  
 
         <a href="">
           <div class="card-single">
             <div>
-              <h1>Attendance</h1>
-              <span>Track students' attendance </span>
+              <h1>Review</h1>
+              <span>Review and grade students assignment</span>
             </div>
-            <div><i class="fa-regular fa-rectangle-list fa-3x"></i></i></div>
-          </div>
-        </a>  
-
-        <a href="">
-          <div class="card-single">
-            <div>
-              <h1>View Schedule</h1>
-              <span>Keep track of the program for each day</span>
-            </div>
-            <div><i class="fa-solid fa-calendar-days fa-3x"></i></div>
-          </div>
-        </a>  
-
-        <a href="">
-          <div class="card-single">
-            <div>
-              <h1>Grade</h1>
-              <span>Track students' performance</span>
-            </div>
-            <div><i class="fa-solid fa-spinner fa-3x"></i></div>
-          </div>
-        </a>  
-
-        <a href="">
-          <div class="card-single">
-            <div>
-              <h1>Read Mail</h1>
-              <span>Stay up to date with important information</span>
-            </div>
-            <div><i class="fa-solid fa-envelope fa-3x"></i></div>
+            <div><i class="fa-solid fa-magnifying-glass fa-3x"></i></div>
           </div>
         </a>  
                

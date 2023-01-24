@@ -1,29 +1,29 @@
-:root{
+:root {
   --main-color: #f76704;
   --color-dark: #003865;
   --text-grey: #8390a2;
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body{
-  font-family: 'Poppins', sans-serif ;
+body {
+  font-family: "Poppins", sans-serif;
   line-height: 1.8;
 }
 
-a{
+a {
   text-decoration: none;
-  color:  var(--main-color);
+  color: var(--main-color);
   font-weight: bold;
 }
-a:hover{
-  color:#ccd6d7;
+a:hover {
+  color: #ccd6d7;
 }
 
-.container1{
+.container1 {
   margin: 5px auto;
   max-width: 400px;
   padding: 1.5rem;
@@ -31,47 +31,46 @@ a:hover{
   border: 1px solid #ccc;
 }
 
-.container{
-  margin: 120px auto 70px auto ;
+.container {
+  margin: 120px auto 70px auto;
   max-width: 400px;
   padding: 1.5rem;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
 }
 
-.form-wrap{
- padding: 15px 25px;
+.form-wrap {
+  padding: 15px 25px;
 }
 
-.form-wrap h1, 
-.form-wrap p{
+.form-wrap h1,
+.form-wrap p {
   text-align: center;
 }
 
-.form-wrap h1{
+.form-wrap h1 {
   color: var(--color-dark);
 }
 
-.form-wrap .form-group{
+.form-wrap .form-group {
   margin-top: 15px;
 }
-.form-wrap .form-group label{
+.form-wrap .form-group label {
   display: block;
   color: var(--text-grey);
 }
 .form-wrap .form-group input,
 .form-wrap .form-group select,
-.form-wrap .form-group textarea{
+.form-wrap .form-group textarea {
   width: 100%;
   padding: 10px;
   border: #444 1px solid;
   border-radius: 5px;
   outline: none;
-  
 }
 
 .form-wrap button,
-input[type=button]{
+input[type="button"] {
   display: block;
   background: var(--main-color);
   width: 100%;
@@ -83,45 +82,42 @@ input[type=button]{
   border: none;
   border-radius: 5px;
 }
-.form-wrap button:hover{
+.form-wrap button:hover {
   background-color: #003865;
   border-radius: 5px;
   transition: 1s;
   color: #fff;
   font-weight: medium;
 }
-.form-wrap .bottom-text{
+.form-wrap .bottom-text {
   font-size: 13px;
   margin-top: 20px;
 }
-footer{
+footer {
   text-align: center;
   margin-top: 10px;
   color: #fff;
 }
 
-#radio{
+#radio {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 200px;
   accent-color: var(--main-color);
- 
 }
-#radio input{
+#radio input {
   outline: none;
-  
 }
 
-#checkbox{
+#checkbox {
   display: flex;
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
   width: 300px;
   accent-color: var(--main-color);
-  
 }
 
 .butns-group {
@@ -131,18 +127,18 @@ footer{
   width: 100%;
 }
 
-textarea{
-  font-family: 'Poppins', sans-serif ;
+textarea {
+  font-family: "Poppins", sans-serif;
   color: #000;
 }
 
-::file-selector-button{
+::file-selector-button {
   color: #fff;
   border: 1px solid var(--main-color);
   border-radius: 2px;
   padding: 3px 5px;
   background: var(--main-color);
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 input:-webkit-autofill,

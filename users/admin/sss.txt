@@ -7,3 +7,32 @@
           <img src="../pic/profile.png" width="60px" height="60px"/>
         }
   ?>
+
+  
+if(isset($_POST['update'])){
+  $id = $_GET['id'];
+  $date = date("Y-m-d");
+  $course = $_POST['course'];
+  $title = $_POST['title'];
+  $duedate = $_POST['duedate'];
+  
+
+  $assignmentname =$_FILES['assignment']['name']; 
+  $assignmenttype = $_FILES['assignment']['type'];
+  $assignmentsize = $_FILES['assignment']['size'];
+  $assignmentloc = $_FILES['assignment']['tmp_name'];
+  move_uploaded_file($assignmentloc,"../assignment/".$assignmentname);
+  $assignment2 = "assignment/".$assignmentname;
+  
+      
+  $edit = "UPDATE assignment SET date ='$date', course = '$course', title = '$title', duedate = '$duedate', assignment = '$assignment2' WHERE id='$id'";
+  
+  $result = $conn->query($edit);
+
+  if($result === TRUE ){
+    echo "Data updated";
+    header("location:assign.php");
+  } else{  
+    echo "Data not updated";
+  }
+}

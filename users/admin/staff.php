@@ -66,7 +66,7 @@ $query2  = "SELECT * FROM admindata ORDER BY fname ASC";
                 <td>Passport</td>
                 <td>Name</td>
                 <td>Staff ID</td>
-                <td>Email</td>
+                <td>Status</td>
                 <td>Phone Number</td>
                 <td>View</td>
                 <td>Edit</td>
@@ -82,11 +82,11 @@ $query2  = "SELECT * FROM admindata ORDER BY fname ASC";
                 echo "<td>". "<img src = ".'../'.$row['passport']." class = 'pic'/>"."</td>";
                 echo "<td>".$row['fname']."</td>";
                 echo "<td>".$row['staffnum']."</td>";
-                echo "<td>".$row['email']."</td>";
+                echo "<td>".$row['status']."</td>";
                 echo "<td>".$row['phone']."</td>";
                 echo "<td>". '<a href="../inc/adminprofile.php?id='.$row['id']. '"class="btn" target="_blank"> <i class="fa-solid fa-eye"></i></a>'."</td>";
-                echo "<td>". '<a href="edit.php?userid='.$row['id'].'"class="btn"> <i class="fa-solid fa-pen"></i></a>'."</td>";
-                echo "<td>". '<a href="delete.php?id='.$row['id']. ' "class="btn" onclick="return confirm(`Are you sure want to delete this record?`)" > <i class="fa-solid fa-trash-can"></i></a>'."</td>";
+                echo "<td>". '<a href="editadmin.php?id='.$row['id'].'"class="btn"> <i class="fa-solid fa-pen"></i></a>'."</td>";
+                echo "<td>". '<a href="deleteadmin.php?id='.$row['id']. ' "class="btn" onclick="return confirm(`Are you sure want to delete this record?`)" > <i class="fa-solid fa-trash-can"></i></a>'."</td>";
                 echo "<td>". "</td>";
                 echo "</tr>";
               }

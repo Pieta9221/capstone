@@ -55,8 +55,8 @@ $row = $result -> fetch_array();
             <div>
             <h3>Our Core Values</h3>
             <p>OPPORTUNITY</p>
-            <p>"In the middle of difficulty lies opportunity."</p>
-            <em><small>-Albert Einstein</small></em>
+            <p>"Nothing is more expensive than a missed opportunity."</p>
+            <em><small>-Jackson Brown</small></em>
             </div>
           </div>
          
@@ -72,17 +72,17 @@ $row = $result -> fetch_array();
               <h1>Admissions</h1>
               <span>Process students admission</span>
             </div>
-            <div><i class="fa-solid fa-graduation-cap fa-3x"></i></div>
+            <div><i class="fa-solid fa-school fa-3x"></i></div>
           </div>
         </a> 
 
-        <a href="">
+        <a href="student.php">
           <div class="card-single">
             <div>
               <h1>Students</h1>
               <span>List of all students admitted</span>
             </div>
-            <div><i class="fa-solid fa-graduation-cap fa-3x"></i></div>
+            <div><i class="fa-solid fa-user-graduate fa-3x"></i></div>
           </div>
         </a>  
 
@@ -92,7 +92,7 @@ $row = $result -> fetch_array();
               <h1>Staff</h1>
               <span>List of all staff in the hub</span>
             </div>
-            <div><i class="fa-solid fa-person-chalkboard fa-3x"></i></i></div>
+            <div><i class="fa-solid fa-user-tie fa-3x"></i></div>
           </div>
         </a>  
 

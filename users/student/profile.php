@@ -31,6 +31,37 @@ if(isset($_POST['update'])){
  
 }
 
+if(isset($_POST['update1'])){
+  
+  $photoname =$_FILES['passport']['name']; 
+  $phototype = $_FILES['passport']['type'];
+  $photosize = $_FILES['passport']['size'];
+  $photoloc = $_FILES['passport']['tmp_name']; 
+  move_uploaded_file($photoloc,"../users/pic/".$photoname);
+  $filepath = "pic/".$photoname; 
+    
+  $check = explode(".",$photoname);
+  $checkpath = strtolower(end($check));
+  $arraytype = array("jpeg", "gif", "png", "jpg");
+    if(in_array($checkpath, $arraytype) === FALSE){
+      echo "Please choose a valid file type like jpeg, gif, png, or jpg"; 
+    }elseif($photosize > 5120000){
+        echo "Photo size should not be more than 5MB "; 
+    } else{
+  
+      $edit = "UPDATE studentdata SET passport= '$filepath' WHERE email='$email'";
+  
+      $result = $conn->query($edit);
+
+      if($result === TRUE ){
+        echo "Data updated";
+        header("location:profile.php");
+      } else{  
+        echo "Data not updated";
+      }
+    }  
+}
+
   
 ?>
 
@@ -44,7 +75,7 @@ if(isset($_POST['update'])){
           <div class="user-wrapper">
             <div>
               <?php echo "<img src = ".'../'.$row['passport']." width='100px' height='100px' />"; ?> 
-              <div><a href=""><i class="fa-solid fa-pen"></i></a></div>
+              <div><a href="#popup2"><i class="fa-solid fa-pen"></i></a></div>
             </div>
             <div>
               <h2><?php echo $row['fname']; ?></h2>
@@ -58,7 +89,7 @@ if(isset($_POST['update'])){
             <hr>
             <table>
               <tr>
-                <td>Reg Num.:</td>
+                <td>Reg No.:</td>
                 <td>LM12201</td>
               </tr>
               <tr>
@@ -153,6 +184,27 @@ if(isset($_POST['update'])){
     </div>
         
    
+    <div id="popup2" class="overlay">
+      <div class="popup">
+        
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <div class="form-wrap">
+            <h1>Update Passport</h1>
+            <form action="#" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="fname">Passport</label>
+                <input type="file" name="passport" required/>
+              </div>
+                            
+              <button type="submit" class="update" name="update1">UPDATE</button>
+              
+            </form>
+          </div>
+        
+         </div>
+      </div>
+   </div>
 
   <section class="copyright">
       <p class="copy">&copy; 2022 LM Tech Hub</p>
