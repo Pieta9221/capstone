@@ -56,6 +56,10 @@ if(isset($_POST['send'])){
     <div class="rec">
         <a href="#popup1"><button class="btn"> <i class="fa-solid fa-plus"></i> Add Ticket</button></a>
 
+       
+       <div class="card-header">
+          <h2>My Tickets</h2>
+        </div>
         <?php
 
         $query3  = "SELECT * FROM ticket WHERE email='$email' ORDER BY date";
@@ -65,9 +69,6 @@ if(isset($_POST['send'])){
         } else{  
 
         ?> 
-       <div class="card-header">
-          <h2>My Tickets</h2>
-        </div>
             
         <div class="table-responsive">
           <table>

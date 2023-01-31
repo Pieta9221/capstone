@@ -57,7 +57,7 @@ $id = $_GET['id'];
             
            <div>
               <h2><?php echo $rows['fname']; ?></h2>
-              <p><?php echo $rows['status']; ?>, LM12201</p>
+              <p><?php echo $rows['status']; ?>, <?php echo $rows['staffid']; ?></p>
             </div>
           </div>
           <br>

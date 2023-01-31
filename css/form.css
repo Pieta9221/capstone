@@ -57,7 +57,7 @@ a:hover {
 }
 .form-wrap .form-group label {
   display: block;
-  color: var(--text-grey);
+  color: var(--color-dark);
 }
 .form-wrap .form-group input,
 .form-wrap .form-group select,

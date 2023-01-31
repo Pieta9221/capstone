@@ -93,12 +93,7 @@ $conn = new mysqli ($host, $user, $pwd, $database);
 
     
 
-    <script> document.cookie = "score = " + userScore </script>
-
-    <?php
-    $score = $_COOKIE['score'];
-    ?>
-  
+ 
 
 </body>
 </html>

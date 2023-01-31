@@ -96,6 +96,16 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
+        <a href="staff.php">
+          <div class="card-single">
+            <div>
+              <h1>Staff</h1>
+              <span>Connect with staff in the hub</span>
+            </div>
+            <div><i class="fa-solid fa-user-tie fa-3x"></i></div>
+          </div>
+        </a>  
+
         <a href="">
           <div class="card-single">
             <div>
@@ -106,7 +116,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+        <a href="assign.php">
           <div class="card-single">
             <div>
               <h1>Track Course</h1>

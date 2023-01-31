@@ -35,7 +35,7 @@
 
       
       <section>
-        <form action="formpro.php" method="POST" enctype="multipart/form-data" class="form">
+        <form action="formpro.php" id= "form" method="POST" enctype="multipart/form-data" class="form">
           <h1 class="text-center">Registration Form</h1>
           <!-- Progress bar -->
           <div class="progressbar">
@@ -55,33 +55,33 @@
             <div class="input-group">
               <label for="passport">Upload Your Passport</label>
               <input type="file" class="pass fill" name="passport" accept="image/*" required/>
+              
             </div>
   
             <div class="input-group">
               <label for="fname">Full Name</label>
               <input type="text" name="fname" class="fill" placeholder="Input your full name" required/>
+             
             </div>
   
             <div class="input-group">
               <label for="dob">Date of Birth</label>
               <input type="date" name="dob" class="fill" placeholder="Input your dob" required/>
-            </div>
+           </div>
             
             <div class="input-group">
                <label for="gender">Gender</label>
                 <select type="select" id="gender" name="gender" class="sel fill" required> 
-                <option value="nothing">Select Gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                                
-              </select> 
+                  <option value="nothing">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select> 
             </div>
 
             
             <div class="butns-group">
-              
               <a href="register.html" class="butn">BACK</a>
-              <a href="#" class="butn btn-next">NEXT</a>
+              <a href="#" class="butn btn-next" name="next">NEXT</a>
             </div>
           </div>
           
@@ -141,8 +141,6 @@
             </div>
           
               <div class="butns-group">
-                <!-- <button type="button" class="butn btn-prev">PREVIOUS</button>
-                <button type="button" class="butn btn-next">NEXT</button> -->
                 <a href="#" class="butn btn-prev">PREVIOUS</a>
                 <a href="#" class="butn btn-next" name="next">NEXT</a>
               </div>
@@ -222,8 +220,9 @@
               <p><i class="fa-regular fa-envelope"></i> &nbsp; info@lmtechub.org</p>
               <h3>Follow us on our social media platforms</h3>
               <div class="icons"> 
-                <a href="#" ><i class="fa-brands fa-facebook fa-lg"></i></a>
-                <a href="#" ><i class="fa-brands fa-youtube fa-lg"></i></a>
+                <a href="https://www.facebook.com/lmtechub/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCaN0wLt_rbbCGlAOsDiY1_A" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                <a href="https://www.linkedin.com/company/lm-tech-hub/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
               </div> 
           </div> 
         
@@ -258,7 +257,7 @@
 
     <!--Site JS-->
     <script src="./js/main.js"></script>
-
-         
+    <script src="./js/multi.js"></script>
+              
   </body>
 </html>

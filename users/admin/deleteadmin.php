@@ -8,12 +8,14 @@ if(isset($_GET['id'])){
   $query  = "DELETE FROM admindata WHERE id = '$id'";
   $result = $conn->query($query);
   
-  if($resultb== TRUE){
-    echo "Successfully Deleted";
+  if($result === TRUE){
+    $_SESSION['tick'] = "Successfully Deleted";
+    $_SESSION['status_code'] = "success";
     header('location:staff.php');
     exit;
   }else{
-    echo "Not Deleted";
+    $_SESSION['tick'] = "Not Deleted";
+    $_SESSION['status_code'] = "error";
     header('location:staff.php');
     exit;
   }
@@ -21,4 +23,8 @@ if(isset($_GET['id'])){
  
 } 
 ?>
+
+<?php
+  include('../inc/script.php');
+  ?>
 

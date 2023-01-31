@@ -15,6 +15,7 @@ if(isset($_POST['add'])){
   $course = $_POST['course'];
   $title = $_POST['title'];
   $duedate = $_POST['duedate'];
+  $assid = "ASS".(rand(99,1000));
   
   
 
@@ -23,21 +24,25 @@ if(isset($_POST['add'])){
   $assignmentsize = $_FILES['assignment']['size'];
   $assignmentloc = $_FILES['assignment']['tmp_name'];
   move_uploaded_file($assignmentloc,"../assignment/".$assignmentname);
-  $assignment2 = "assignment/".$assignmentname;
+  $assignment2 = "../assignment/".$assignmentname;
         
   $query2 = "SELECT * FROM assignment WHERE title = '$title'";
   $res = $conn->query($query2);
 
   if ($res->num_rows>0){
-    echo "$fname data already exists";
+    echo "Data already exists";
   }
   else{
-  $insert = "INSERT INTO assignment (date, course, title, duedate, assignment) values ('$date', '$course', '$title', '$duedate', '$assignment2')";
+  $insert = "INSERT INTO assignment (date, course, title, duedate, assignment, email, assid) values ('$date', '$course', '$title', '$duedate', '$assignment2', '$email', '$assid')";
 
   if($conn->query($insert)===TRUE){
-   echo "Successfully added";
+    $_SESSION['tick'] = "Successfully Added";
+    $_SESSION['status_code'] = "success";
+    header('location:assign.php');
   }else{
-    echo "Ooops! Problem with upload, try again";
+    $_SESSION['tick'] = "Not Added";
+    $_SESSION['status_code'] = "error";
+    header('location:assign.php');
   }
   }
 }
@@ -57,7 +62,7 @@ if(isset($_POST['add'])){
         </div>
 
         <?php
-        $query2  = "SELECT * FROM assignment ORDER BY date";
+        $query2  = "SELECT * FROM assignment WHERE email='$email' ORDER BY date DESC";
         $result2 = $conn->query($query2);
         if($result2->num_rows == 0){
           echo "Data not found";
@@ -70,11 +75,11 @@ if(isset($_POST['add'])){
             <thead>
               <tr>
                 <td>Date</td>
+                <td>ID</td>
                 <td>Course</td>
                 <td>Title</td>
                 <td>Due Date</td>
                 <td>View</td>
-                <td>Edit</td>
                 <td>Delete</td>
                 <td></td>
               </tr>
@@ -85,6 +90,7 @@ if(isset($_POST['add'])){
               while($row = $result2 -> fetch_array()){
                 echo "<tr>";
                 echo "<td>".$row['date']."</td>";
+                echo "<td>".$row['assid']."</td>";
                 echo "<td>".$row['course']."</td>";
                 echo "<td>".$row['title']."</td>";
                 echo "<td>".$row['duedate']."</td>";
@@ -145,7 +151,7 @@ if(isset($_POST['add'])){
   <section class="copyright">
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
-  
+
 
 </body>
 </html>

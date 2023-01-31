@@ -31,7 +31,7 @@ if(isset($_POST['update1'])){
   $phototype = $_FILES['passport']['type'];
   $photosize = $_FILES['passport']['size'];
   $photoloc = $_FILES['passport']['tmp_name']; 
-  move_uploaded_file($photoloc,"../users/pic/".$photoname);
+  move_uploaded_file($photoloc,"../pic/".$photoname);
   $filepath = "pic/".$photoname; 
     
   $check = explode(".",$photoname);
@@ -82,11 +82,11 @@ if(isset($_POST['update1'])){
             <hr>
             <table>
               <tr>
-                <td>Staff ID:</td>
-                <td>LM12201</td>
+                <td><i class="fa-solid fa-ticket"></i> Staff ID:</td>
+                <td><?php echo $row['staffid'];?></td>
               </tr>
               <tr>
-                <td>Role:</td>
+                <td><i class="fa-solid fa-user-tie"></i> Role:</td>
                 <td><?php echo $row['role'];?></td>
               </tr>
              
@@ -98,12 +98,12 @@ if(isset($_POST['update1'])){
             <hr>
             <table>
               <tr>
-                <td>Phone:</td>
+                <td><i class="fa-solid fa-phone"></i> Phone:</td>
                 <td><?php echo $row['phone'];?></td>
               </tr>
               
               <tr>
-                <td>Email:</td>
+                <td><i class="fa-regular fa-envelope"></i> Email:</td>
                 <td><?php echo $row['email'];?></td>
               </tr>
 

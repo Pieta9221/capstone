@@ -1,8 +1,12 @@
 <?php 
 session_start();
-// include_once("../session.php");
-include('connection.php');
+include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
+$email = $_SESSION['email'];
+$query  = "SELECT * FROM admindata WHERE email='$email'";
+$result = $conn->query($query);
+$row = $result -> fetch_array();
+
 
 $id = $_GET['id'];
   
@@ -17,50 +21,35 @@ $id = $_GET['id'];
 ?>
 
 
-<!DOCTYPE html>
-<html>
- <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Student Profile</title>
-   <link rel="stylesheet" href="../.././css/dashboard.css">
-   <link rel="icon" href="../inc/favicon.png">   
-   <link href="https:fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-   
-      
-  </head>
-<body>
+<?php 
+      include('nav.php');
+    ?>
   
-    <section class="cop">
-      <h2 class="copy">Student Profile</h2>
-    </section>
-    
-    <div class="recent">
-        <div>
+  <main>
+      <div class="recent">
+       
           <div class="user-wrapper">
-            <?php echo "<img src = ".'../'.$rows['passport']." width='100px' height='100px' />"; ?> 
-             
+            <div>
+              <?php echo "<img src = ".'../'.$rows['passport']." width='100px' height='100px' />"; ?> 
+              <div><a href="#popup2"><i class="fa-solid fa-pen"></i></a></div>
             </div>
             <div>
               <h2><?php echo $rows['fname']; ?></h2>
               <p>Student</p>
             </div>
           </div>
-          <br>
+         
           
           <div>
             <p>COURSE INFORMATION:</p>
             <hr>
             <table>
               <tr>
-                <td>Reg No.:</td>
-                <td>LM12201</td>
+                <td><i class="fa-solid fa-ticket"></i> Reg No.:</td>
+                <td><?php echo $rows['regnum'];?></td>
               </tr>
               <tr>
-                <td>Course:</td>
+                <td><i class="fa-solid fa-book"></i> Course:</td>
                 <td><?php echo $rows['course'];?></td>
               </tr>
              
@@ -70,11 +59,11 @@ $id = $_GET['id'];
             <hr>
             <table>
               <tr>
-                <td>Gender:</td>
+                <td><i class="fa-regular fa-user"></i> Gender:</td>
                 <td><?php echo $rows['gender'];?></td>
               </tr>
               <tr>
-                <td>Date of Birth:</td>
+                <td><i class="fa-regular fa-calendar"></i> Date of Birth:</td>
                 <td><?php echo $rows['dob'];?></td>
               </tr>
             </table>
@@ -84,35 +73,35 @@ $id = $_GET['id'];
             <hr>
             <table>
               <tr>
-                <td>Phone:</td>
+                <td><i class="fa-solid fa-phone"></i> Phone:</td>
                 <td><?php echo $rows['phone'];?></td>
               </tr>
               
               <tr>
-                <td>Email:</td>
+                <td><i class="fa-regular fa-envelope"></i> Email:</td>
                 <td><?php echo $rows['email'];?></td>
               </tr>
 
               <tr>
-                <td>Address:</td>
+                <td><i class="fa-solid fa-location-dot"></i> Address:</td>
                 <td><?php echo $rows['address'];?></td>
               </tr>
 
               <tr>
-                <td>State:</td>
+                <td><i class="fa-solid fa-earth"></i> State:</td>
                 <td><?php echo $rows['state'];?></td>
               </tr>
               
             </table>
+            
           </div>
                     
         </div>
       </div>
             
-
+      
+    </main>
   
-      <br>
-    <br>
     <section class="copyright">
       <p class="copy">&copy; 2022 LM Tech Hub</p>
     </section>

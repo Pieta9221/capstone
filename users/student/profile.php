@@ -37,7 +37,7 @@ if(isset($_POST['update1'])){
   $phototype = $_FILES['passport']['type'];
   $photosize = $_FILES['passport']['size'];
   $photoloc = $_FILES['passport']['tmp_name']; 
-  move_uploaded_file($photoloc,"../users/pic/".$photoname);
+  move_uploaded_file($photoloc,"../pic/".$photoname);
   $filepath = "pic/".$photoname; 
     
   $check = explode(".",$photoname);
@@ -89,11 +89,11 @@ if(isset($_POST['update1'])){
             <hr>
             <table>
               <tr>
-                <td>Reg No.:</td>
-                <td>LM12201</td>
+                <td><i class="fa-solid fa-ticket"></i> Reg No.:</td>
+                <td><?php echo $row['regnum'];?></td>
               </tr>
               <tr>
-                <td>Course:</td>
+                <td><i class="fa-solid fa-book"></i> Course:</td>
                 <td><?php echo $row['course'];?></td>
               </tr>
              
@@ -103,11 +103,11 @@ if(isset($_POST['update1'])){
             <hr>
             <table>
               <tr>
-                <td>Gender:</td>
+                <td><i class="fa-regular fa-user"></i> Gender:</td>
                 <td><?php echo $row['gender'];?></td>
               </tr>
               <tr>
-                <td>Date of Birth:</td>
+                <td><i class="fa-regular fa-calendar"></i> Date of Birth:</td>
                 <td><?php echo $row['dob'];?></td>
               </tr>
             </table>
@@ -117,22 +117,22 @@ if(isset($_POST['update1'])){
             <hr>
             <table>
               <tr>
-                <td>Phone:</td>
+                <td><i class="fa-solid fa-phone"></i> Phone:</td>
                 <td><?php echo $row['phone'];?></td>
               </tr>
               
               <tr>
-                <td>Email:</td>
+                <td><i class="fa-regular fa-envelope"></i> Email:</td>
                 <td><?php echo $row['email'];?></td>
               </tr>
 
               <tr>
-                <td>Address:</td>
+                <td><i class="fa-solid fa-location-dot"></i> Address:</td>
                 <td><?php echo $row['address'];?></td>
               </tr>
 
               <tr>
-                <td>State:</td>
+                <td><i class="fa-solid fa-earth"></i> State:</td>
                 <td><?php echo $row['state'];?></td>
               </tr>
               

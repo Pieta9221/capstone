@@ -40,7 +40,6 @@ $query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
                 <td>Name</td>
                 <td>Reg. No.</td>
                 <td>Course</td>
-                <td>Phone Number</td>
                 <td>View</td>
                 <td>Edit</td>
                 <td>Delete</td>
@@ -56,8 +55,7 @@ $query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
                 echo "<td>".$row['fname']."</td>";
                 echo "<td>".$row['regnum']."</td>";
                 echo "<td>".$row['course']."</td>";
-                echo "<td>".$row['phone']."</td>";
-                echo "<td>". '<a href="../inc/studentprofile.php?id='.$row['id']. '"class="btn" target="_blank"> <i class="fa-solid fa-eye"></i></a>'."</td>";
+                echo "<td>". '<a href="studentprofile.php?id='.$row['id']. '"class="btn" > <i class="fa-solid fa-eye"></i></a>'."</td>";
                 echo "<td>". '<a href="editstudent.php?id='.$row['id'].'"class="btn"> <i class="fa-solid fa-pen"></i></a>'."</td>";
                 echo "<td>". '<a href="deletestudent.php?id='.$row['id']. ' "class="btn" onclick="return confirm(`Are you sure want to delete this record?`)" > <i class="fa-solid fa-trash-can"></i></a>'."</td>";
                 echo "<td>". "</td>";

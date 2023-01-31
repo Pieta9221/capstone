@@ -4,46 +4,9 @@ session_start();
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
 $email = $_SESSION['email'];
-$query  = "SELECT * FROM admindata WHERE email='$email'";
+$query  = "SELECT * FROM studentdata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
-
-if(isset($_POST['add'])){
-  $staffid = "LM".(rand(100,999));
-  $fname = $_POST['fname'];
-  $emaildata = $_POST['email'];
-  $status = $_POST['status'];
-  $role = $_POST['role'];
-  $pword = $_POST['pword'];
-  $pic = "pic/profile.png";
-  $pword3 = md5($pword);
-        
-  $query2 = "SELECT * FROM admindata WHERE email = '$emaildata'";
-  $res = $conn->query($query2);
-
-  if ($res->num_rows>0){
-    $_SESSION['tick'] = "Data already exists";
-    $_SESSION['status_code'] = "error";
-    
-  }
-  else{
-  $insert = "INSERT INTO admindata (fname, email, staffid, status, role, passport, pword) values ('$fname', '$emaildata', '$staffid', '$status', '$role', '$pic', '$pword3')";
-
-  if($conn->query($insert)===TRUE){
-    $_SESSION['tick'] = "Admin successfully added";
-    $_SESSION['status_code'] = "success";
-  }else{
-    $_SESSION['tick'] = "Ooops! Problem with registration, try again";
-    $_SESSION['status_code'] = "error";
-  }
-  }
-}
-
-
-  
-   ?> 
-<?php 
-
 
   
 ?>
@@ -54,7 +17,7 @@ if(isset($_POST['add'])){
     
     <main>
       <div class="rec">
-        <a href="#popup1"><button class="btn"> <i class="fa-solid fa-plus"></i> Add Staff</button></a>
+        
        <div class="card-header">
           <h2>All Staff</h2>
         </div>
@@ -68,8 +31,7 @@ if(isset($_POST['add'])){
                 <td>Staff ID</td>
                 <td>Role</td>
                 <td>View</td>
-                <td>Edit</td>
-                <td>Delete</td>
+               
                 <td></td>
               </tr>
             </thead>
@@ -88,8 +50,6 @@ if(isset($_POST['add'])){
                   echo "<td>".$row['staffid']."</td>";
                   echo "<td>".$row['role']."</td>";
                   echo "<td>". '<a href="staffprofile.php?staffid='.$row['staffid']. '"class="btn" > <i class="fa-solid fa-eye"></i></a>'."</td>";
-                  echo "<td>". '<a href="editadmin.php?id='.$row['id'].'"class="btn"> <i class="fa-solid fa-pen"></i></a>'."</td>";
-                  echo "<td>". '<a href="deleteadmin.php?id='.$row['id']. ' "class="btn" onclick="return confirm(`Are you sure want to delete this record?`)" > <i class="fa-solid fa-trash-can"></i></a>'."</td>";
                   echo "<td>". "</td>";
                   echo "</tr>";
                 }

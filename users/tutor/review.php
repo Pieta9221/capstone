@@ -8,18 +8,6 @@ $query  = "SELECT * FROM admindata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
 
-
-$query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
-  $result2 = $conn->query($query2);
-  if($result2->num_rows == 0){
-    echo "Data not found";
-  } else{  
-  
-   ?> 
-<?php 
-
-
-  
 ?>
 
     <?php 
@@ -28,32 +16,40 @@ $query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
     
     <main>
       <div class="rec">
-        <div class="card-header">
-          <h2>All Students</h2>
-        </div>
             
+         <div class="card-header">
+          <h2>Assignment Review</h2>
+        </div>
+
+      
         <div class="table-responsive">
           <table>
             <thead>
               <tr>
-                <td>Passport</td>
-                <td>Name</td>
-                <td>Reg. No.</td>
+                <td>Date</td>
+                <td>ID</td>
                 <td>Course</td>
-                <td>View</td>
+                <td>Review</td>
                 <td></td>
               </tr>
             </thead>
             
             <tbody>
-              <?php
+            <?php
+       
+            $query2  = "SELECT * FROM assignment WHERE email='$email' ORDER BY date DESC";
+            $result2 = $conn->query($query2);
+            if($result2->num_rows == 0){
+              echo "Data not found";
+            } else{  
+                
+           
               while($row = $result2 -> fetch_array()){
                 echo "<tr>";
-                echo "<td>". "<img src = ".'../'.$row['passport']." class = 'pic'/>"."</td>";
-                echo "<td>".$row['fname']."</td>";
-                echo "<td>".$row['regnum']."</td>";
+                echo "<td>".$row['date']."</td>";
+                echo "<td>".$row['assid']."</td>";
                 echo "<td>".$row['course']."</td>";
-                echo "<td>". '<a href="studentprofile.php?id='.$row['id']. '"class="btn" > <i class="fa-solid fa-eye"></i></a>'."</td>";
+                echo "<td>". '<a href="review1.php?assid='.$row['assid']. '"class="btn"> <i class="fa-solid fa-magnifying-glass"></i></a>'."</td>";
                 echo "<td>". "</td>";
                 echo "</tr>";
               }
@@ -67,13 +63,14 @@ $query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
 
     </main>
     
-
-    
   
+   
   <section class="copyright">
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
-  
+  <?php
+  include('../inc/script.php');
+  ?>
 
 </body>
 </html>

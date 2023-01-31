@@ -86,7 +86,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+        <a href="review.php">
           <div class="card-single">
             <div>
               <h1>Review</h1>
@@ -106,5 +106,6 @@ $row = $result -> fetch_array();
   </section>  
 
   <script src="../.././js/carousel.js"></script>
+  
 </body>
 </html>
