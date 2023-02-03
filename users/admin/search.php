@@ -45,9 +45,9 @@ $row = $result -> fetch_array();
                   
                 } 
               } else{
-                echo "<tr>";
+                echo "<td>";
                 echo "Data Not Found";
-                echo "</tr>";
+                echo "</td>";
                 
               }
               
