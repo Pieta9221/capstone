@@ -57,7 +57,7 @@ $id = $_GET['id'];
             
            <div>
               <h2><?php echo $rows['fname']; ?></h2>
-              <p>Student, LM12201</p>
+              <p>Student, <?php echo $rows['regnum']; ?></p>
             </div>
           </div>
           <br>
@@ -111,7 +111,7 @@ $id = $_GET['id'];
       <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>
 <?php

@@ -66,7 +66,7 @@ $row = $result -> fetch_array();
       </div>
 
       <div class="cards">
-        <a href="">
+        <a href="admissions.php">
           <div class="card-single">
             <div>
               <h1>Admissions</h1>
@@ -96,17 +96,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
-          <div class="card-single">
-            <div>
-              <h1>Attendance</h1>
-              <span>Track students' attendance </span>
-            </div>
-            <div><i class="fa-regular fa-rectangle-list fa-3x"></i></i></div>
-          </div>
-        </a>  
-
-        <a href="">
+        <a href="schedule.php">
           <div class="card-single">
             <div>
               <h1>View Schedule</h1>
@@ -116,7 +106,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+        <a href="grade.php">
           <div class="card-single">
             <div>
               <h1>Grades</h1>
@@ -126,16 +116,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
-          <div class="card-single">
-            <div>
-              <h1>Read Mail</h1>
-              <span>Stay up to date with important information</span>
-            </div>
-            <div><i class="fa-solid fa-envelope fa-3x"></i></div>
-          </div>
-        </a>  
-               
+                      
       </div>
      
     </main>
@@ -146,5 +127,6 @@ $row = $result -> fetch_array();
   </section>  
 
   <script src="../.././js/carousel.js"></script>
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>

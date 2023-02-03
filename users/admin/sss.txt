@@ -274,3 +274,17 @@ echo "<script> alert('') </script>";
 $score = $_COOKIE['score'];
 ?>
 </script>
+
+
+   }  else{
+                $query3 = "SELECT * FROM admindata WHERE fname LIKE '%$fname%'";
+                $result3 = $conn->query($query3);
+                if($result3->num_rows > 0){
+                  while($rows2 = $result3 -> fetch_array()){
+                    echo "<tr>";
+                    echo "<td>". "<img src = ".'../'.$rows2['passport']." class = 'pic'/>"."</td>";
+                    echo "<td>".$rows2['fname']."</td>";
+                    echo "<td>". "</td>";
+                    echo "</tr>";
+                  } 
+                }  

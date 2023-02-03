@@ -1,10 +1,18 @@
 <?php 
 session_start();
-// include_once("../session.php");
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
+$email = $_SESSION['email'];
+$query  = "SELECT * FROM studentdata WHERE email='$email'";
+$result = $conn->query($query);
+$row = $result -> fetch_array();
+
+
+if(!empty($row['quizscore'])){
+    include("quiz2.php");
+  } else{  
   
-?>
+   ?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,10 +83,11 @@ $conn = new mysqli ($host, $user, $pwd, $database);
         <div class="score_text">
             <!-- Here I've inserted Score Result from JavaScript -->
         </div>
-        <form action="POST">
+        <form>
             <div class="buttons">
                 <button class="restart nil">Replay Quiz</button>
-                <a href="../"><button type="submit" class="quit">Quit Quiz</button></a>
+                <a href="dashboard.php">
+                <button type="submit" class="quit">Quit Quiz</button></a>
             </div>
         </form>
         
@@ -90,6 +99,7 @@ $conn = new mysqli ($host, $user, $pwd, $database);
 
      <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="../.././js/script.js"></script>
+    
 
     
 
@@ -97,3 +107,6 @@ $conn = new mysqli ($host, $user, $pwd, $database);
 
 </body>
 </html>
+<?php
+  }
+?>  

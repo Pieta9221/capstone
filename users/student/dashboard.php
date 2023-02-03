@@ -1,13 +1,14 @@
 <?php 
 session_start();
 // include_once("../session.php");
+
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
 $email = $_SESSION['email'];
 $query  = "SELECT * FROM studentdata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
-  
+
 ?>
 
     <?php 
@@ -76,15 +77,15 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+       <a href="status.php">
           <div class="card-single">
             <div>
-              <h1>Quiz Score</h1>
-              <span>Check your quiz score</span>
+              <h1>Admission Status</h1>
+              <span>Check admission status</span>
             </div>
-            <div><i class="fa-solid fa-file-circle-check fa-3x"></i></div>
+            <div><i class="fa-solid fa-hourglass fa-3x"></i></div>
           </div>
-        </a>  
+        </a> 
 
         <a href="student.php">
           <div class="card-single">
@@ -106,7 +107,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
+        <a href="schedule.php">
           <div class="card-single">
             <div>
               <h1>View Schedule</h1>
@@ -126,15 +127,7 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
-        <a href="">
-          <div class="card-single">
-            <div>
-              <h1>Read Mail</h1>
-              <span>Stay up to date with important information</span>
-            </div>
-            <div><i class="fa-solid fa-envelope fa-3x"></i></div>
-          </div>
-        </a>  
+        
                
       </div>
      
@@ -146,5 +139,6 @@ $row = $result -> fetch_array();
   </section>
   
   <script src="../.././js/carousel.js"></script>
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>

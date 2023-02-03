@@ -7,7 +7,12 @@ $email = $_SESSION['email'];
 $query  = "SELECT * FROM studentdata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
-
+$reg = $row['regnum'];
+if(empty($row['regnum'])){
+  include("access.php");
+} elseif($row['status'] == "Suspended"){  
+  include("suspend.php");  
+} else{ 
   
 if(isset($_POST['add'])){
   $regnum = $row['regnum'];
@@ -71,8 +76,11 @@ if(isset($_POST['add'])){
             
             <tbody>
             <?php
+
+
               $query2  = "SELECT * FROM assignment ORDER BY date DESC";
               $result2 = $conn->query($query2);
+              
               if($result2->num_rows == 0){
                 echo "Data not found";
               } else{  
@@ -101,6 +109,58 @@ if(isset($_POST['add'])){
       <a href="#popup1"><button class="btn"> <i class="fa-solid fa-upload"></i> Submit Assignment</button></a>
 
       </div>
+
+      <div class="rec">
+       
+         <div class="card-header">
+          <h2>Grades</h2>
+        </div>
+
+                    
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <td>Date</td>
+                <td>ID</td>
+                <td>Grade</td>
+                <td></td>
+              </tr>
+            </thead>
+            
+            <tbody>
+            <?php
+              $query3  = "SELECT * FROM review WHERE regnum = '$reg' ORDER BY date DESC";
+              $result3 = $conn->query($query3);
+              if($result3->num_rows == 0){
+                echo "Assignment not submitted";
+              } else{  
+        
+          
+              while($rows1 = $result3 -> fetch_array()){
+                echo "<tr>";
+                echo "<td>".$rows1['date']."</td>";
+                echo "<td>".$rows1['assid']."</td>";
+                if($rows1['grade'] == 0){
+                  echo "<td>".'Not Yet Graded'."</td>";
+                }else{
+                  echo "<td>".$rows1['grade']."</td>";
+                }
+                echo "<td>". "</td>";
+                echo "</tr>";
+              }
+              }
+              ?>  
+              
+            </tbody>
+          </table>
+              
+          
+        </div>
+         
+      </div>        
+      
+
     </main>
     
        
@@ -138,6 +198,9 @@ if(isset($_POST['add'])){
   <section class="copyright">
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
-  
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>
+<?php
+}
+?>

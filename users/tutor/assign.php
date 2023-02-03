@@ -36,13 +36,10 @@ if(isset($_POST['add'])){
   $insert = "INSERT INTO assignment (date, course, title, duedate, assignment, email, assid) values ('$date', '$course', '$title', '$duedate', '$assignment2', '$email', '$assid')";
 
   if($conn->query($insert)===TRUE){
-    $_SESSION['tick'] = "Successfully Added";
-    $_SESSION['status_code'] = "success";
-    header('location:assign.php');
+    echo "<script> alert('Successfully Added')</script";
+    
   }else{
-    $_SESSION['tick'] = "Not Added";
-    $_SESSION['status_code'] = "error";
-    header('location:assign.php');
+    echo "<script> alert('Oops! Not Added')</script";
   }
   }
 }
@@ -152,6 +149,6 @@ if(isset($_POST['add'])){
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
 
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>

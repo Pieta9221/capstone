@@ -51,6 +51,10 @@ $id = $_GET['id'];
                 <td><i class="fa-solid fa-book"></i> Course:</td>
                 <td><?php echo $rows['course'];?></td>
               </tr>
+              <tr>
+                <td><i class="fa-regular fa-circle-check"></i> Quiz Score:</td>
+                <td><?php echo $rows['quizscore'];?></td>
+              </tr>
              
             </table>
             <br>
@@ -64,6 +68,10 @@ $id = $_GET['id'];
               <tr>
                 <td><i class="fa-regular fa-calendar"></i> Date of Birth:</td>
                 <td><?php echo $rows['dob'];?></td>
+              </tr>
+              <tr>
+                <td><i class="fa-solid fa-graduation-cap"></i> Student Bio:</td>
+                <td><?php echo $rows['bio'];?></td>
               </tr>
             </table>
             <br>
@@ -105,7 +113,7 @@ $id = $_GET['id'];
       <p class="copy">&copy; 2022 LM Tech Hub</p>
     </section>
   
-
+    <script src="../.././js/theme.js"></script>
 </body>
 </html>
 <?php

@@ -29,6 +29,7 @@ $row = $result -> fetch_array();
                 <td>Date</td>
                 <td>Reg. No.</td>
                 <td>View</td>
+                <td>Grade</td>
                 <td></td>
               </tr>
             </thead>
@@ -50,6 +51,7 @@ $row = $result -> fetch_array();
                 echo "<td>".$row['date']."</td>";
                 echo "<td>".$row['regnum']."</td>";
                 echo "<td>". '<a href="../inc/download.php?assignment='.$row['assignment']. '"class="btn"> <i class="fa-solid fa-download"></i></a>'."</td>";
+                echo "<td>". '<a href="review2.php?regnum='.$row['regnum']. '"class="btn" > <i class="fa-solid fa-check"></i></a>'."</td>";
                 echo "<td>". "</td>";
                 echo "</tr>";
               }
@@ -69,9 +71,7 @@ $row = $result -> fetch_array();
   <section class="copyright">
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
-  <?php
-  include('../inc/script.php');
-  ?>
+  <script src="../.././js/theme.js"></script>
 
 </body>
 </html>

@@ -114,6 +114,6 @@ $row = $result -> fetch_array();
   <section class="copyright">
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>

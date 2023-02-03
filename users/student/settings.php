@@ -24,8 +24,9 @@ $pword = $row['pword'];
           <b>Change Password</b>
           <a href="#popup1"><button class="btn"><i class="fa-solid fa-lock"></i> Password</button></a> 
           <br/>
+          <br/>
           <b>Change Theme</b>
-          <a href="#"><button class="btn"><i class="fa-solid fa-moon"></i> Theme</button></a>  
+          <a href="#"><button class="btn" onclick="toggleTheme()" ><i class="fa-solid fa-moon"></i> Switch Theme</button></a>  
                     
         </div>
       </div>
@@ -66,7 +67,7 @@ $pword = $row['pword'];
       <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>
 

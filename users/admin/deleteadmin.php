@@ -9,22 +9,18 @@ if(isset($_GET['id'])){
   $result = $conn->query($query);
   
   if($result === TRUE){
-    $_SESSION['tick'] = "Successfully Deleted";
-    $_SESSION['status_code'] = "success";
+    echo "Successfully Deleted";
     header('location:staff.php');
-    exit;
+    
   }else{
-    $_SESSION['tick'] = "Not Deleted";
-    $_SESSION['status_code'] = "error";
+    echo "Not Deleted";
     header('location:staff.php');
-    exit;
+    
   }
 
  
 } 
 ?>
 
-<?php
-  include('../inc/script.php');
-  ?>
+
 

@@ -1,7 +1,8 @@
+
 <?php
 session_start();
-session_unset();
-session_destroy();
-header('location:../.././sign.html');
-exit();
+if(session_destroy()) // Destroying All Sessions
+{
+header("Location:../.././sign.php"); // Redirecting To Home Page
+}
 ?>

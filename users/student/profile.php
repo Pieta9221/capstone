@@ -96,6 +96,10 @@ if(isset($_POST['update1'])){
                 <td><i class="fa-solid fa-book"></i> Course:</td>
                 <td><?php echo $row['course'];?></td>
               </tr>
+              <tr>
+                <td><i class="fa-regular fa-circle-check"></i> Admission Status:</td>
+                <td><?php echo $row['status'];?></td>
+              </tr>
              
             </table>
             <br>
@@ -210,7 +214,7 @@ if(isset($_POST['update1'])){
       <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>
 

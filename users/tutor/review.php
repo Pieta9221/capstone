@@ -68,9 +68,7 @@ $row = $result -> fetch_array();
   <section class="copyright">
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
-  <?php
-  include('../inc/script.php');
-  ?>
+  <script src="../.././js/theme.js"></script>
 
 </body>
 </html>

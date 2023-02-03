@@ -36,6 +36,7 @@ if(isset($_POST['send'])){
 
     if($conn->query($insert)===TRUE){
       echo "$fname, Ticket Submitted Successfully";
+      include("support.php");
     }
     else{
       echo "Ooops! Not Submitted";
@@ -78,7 +79,8 @@ if(isset($_POST['send'])){
                 <td>Subject</td>
                 <td>Message</td>
                 <td>Status</td>
-                <td>Feedback</td>
+                <td>Reply</td>
+                
               </tr>
             </thead>
             
@@ -90,7 +92,7 @@ if(isset($_POST['send'])){
                 echo "<td>".$row['subject']."</td>";
                 echo "<td>".$row['message']."</td>";
                 echo "<td>".$row['status']."</td>";
-                echo "<td>". '<a href="../inc/adminprofile.php?id='.$row['id']. '"class="btn" target="_blank"> <i class="fa-solid fa-message"></i></a>'."</td>";
+                echo "<td>". '<a href="viewticket.php?ticketid='.$row['ticketid']. '"class="btn"> <i class="fa-solid fa-message"></i></a>'."</td>";
                 echo "<td>". "</td>";
                 echo "</tr>";
               }
@@ -139,7 +141,7 @@ if(isset($_POST['send'])){
       <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>
 

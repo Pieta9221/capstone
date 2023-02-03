@@ -1,6 +1,12 @@
-:root {
+:root,
+:root.pry {
   --main-color: #f76704;
   --color-dark: #003865;
+  --text-grey: #8390a2;
+}
+:root.sec {
+  --main-color: #003865;
+  --color-dark: #f76704;
   --text-grey: #8390a2;
 }
 
@@ -57,7 +63,7 @@ a:hover {
 }
 .form-wrap .form-group label {
   display: block;
-  color: var(--color-dark);
+  color: rgb(85, 85, 85);
 }
 .form-wrap .form-group input,
 .form-wrap .form-group select,
@@ -83,7 +89,7 @@ input[type="button"] {
   border-radius: 5px;
 }
 .form-wrap button:hover {
-  background-color: #003865;
+  background-color: var(--color-dark);
   border-radius: 5px;
   transition: 1s;
   color: #fff;

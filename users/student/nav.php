@@ -47,7 +47,10 @@
       
       <div class="search-wrapper">
         <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-        <input type="search" name="" id="" placeholder="Search here">
+        <form action="search.php" method="POST">
+          <input type="search" name="fname" id="" placeholder="Search student">
+        </form>
+       
       </div> 
 
       <div class="user-wrapper">

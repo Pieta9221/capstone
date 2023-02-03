@@ -34,13 +34,13 @@ $row = $result -> fetch_array();
           <table>
             <thead>
               <tr>
-                <td>Name</td>
+                
                 <td>Ticket ID</td>
-                <td>Email</td>
+                <td>Name</td>
                 <td>Subject</td>
                 <td>Message</td>
                 <td>Status</td>
-                <td>Reply</td>
+                <td>Action</td>
                 <td></td>
               </tr>
             </thead>
@@ -49,13 +49,18 @@ $row = $result -> fetch_array();
               <?php
               while($row = $result2 -> fetch_array()){
                 echo "<tr>";
-                echo "<td>".$row['fname']."</td>";
+                
                 echo "<td>".$row['ticketid']."</td>";
-                echo "<td>".$row['email']."</td>";
+                echo "<td>".$row['fname']."</td>";
                 echo "<td>".$row['subject']."</td>";
                 echo "<td>".$row['message']."</td>";
                 echo "<td>".$row['status']."</td>";
-                echo "<td>". '<a href="../inc/adminprofile.php?id='.$row['id']. '"class="btn" target="_blank"> <i class="fa-solid fa-reply"></i></a>'."</td>";
+                if($row['status'] == "Pending"){
+                  echo "<td>". '<a href="ticket.php?ticketid='.$row['ticketid'].'"class="btn" > <i class="fa-solid fa-reply"></i></a>'."</td>";
+               
+                 } else{
+                  echo "<td>". '<a href="viewticket.php?ticketid='.$row['ticketid']. '"class="btn" > <i class="fa-solid fa-eye"></i></a>'."</td>";
+                }
                 echo "<td>". "</td>";
                 echo "</tr>";
               }
@@ -77,6 +82,6 @@ $row = $result -> fetch_array();
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>

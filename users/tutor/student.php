@@ -9,7 +9,7 @@ $result = $conn->query($query);
 $row = $result -> fetch_array();
 
 
-$query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
+$query2  = "SELECT * FROM studentdata WHERE regnum !='' ORDER BY fname ASC";
   $result2 = $conn->query($query2);
   if($result2->num_rows == 0){
     echo "Data not found";
@@ -74,6 +74,6 @@ $query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
     <p class="copy">&copy; 2022 LM Tech Hub</p>
   </section>
   
-
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>

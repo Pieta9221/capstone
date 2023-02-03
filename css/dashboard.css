@@ -1,6 +1,12 @@
-:root {
+:root,
+:root.pry {
   --main-color: #f76704;
   --color-dark: #003865;
+  --text-grey: #8390a2;
+}
+:root.sec {
+  --main-color: #003865;
+  --color-dark: #f76704;
   --text-grey: #8390a2;
 }
 
@@ -191,7 +197,7 @@ header label i {
 
 .user-wrapper small {
   display: inline-block;
-  color: var(--text-grey);
+  color: #fff;
 }
 
 main {
@@ -281,6 +287,7 @@ main {
   color: #000;
 }
 
+.recent td textarea,
 .recent td input {
   padding: 10px;
   border: #444 1px solid;
@@ -335,7 +342,7 @@ main {
 .btn-outline:hover,
 .btn:hover {
   border: none;
-  background-color: #003865;
+  background-color: var(--color-dark);
   border-radius: 5px;
   transition: 1s;
   color: #fff;
@@ -457,7 +464,10 @@ tr td:last-child {
   color: var(--main-color);
   margin-left: 0.3rem;
 }
-
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -470,7 +480,7 @@ input:-webkit-autofill:active {
   margin: auto;
   text-align: center;
   border-top: 1px solid #fafafa;
-  background-color: #003865;
+  background-color: var(--color-dark);
   padding: 5px 0;
 }
 
@@ -478,7 +488,7 @@ input:-webkit-autofill:active {
   width: 100%;
   margin: auto;
   text-align: center;
-  background-color: #003865;
+  background-color: var(--color-dark);
   padding: 15px 0;
   margin-bottom: 10px;
 }

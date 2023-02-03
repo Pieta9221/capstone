@@ -4,8 +4,7 @@
 
   
   $config = new mysqli ($host, $user, $pwd, $database);
-  if(isset($_POST['submit'])){
-   
+  
   
     $fname = $_POST['fname'];
     $email = $_POST['email'];
@@ -19,7 +18,7 @@
     $pword = $_POST['pword'];
     $pword2 = $_POST['pword2'];
     $pword3 = md5($pword);
-    
+    $status = "Pending";
     
     $photoname =$_FILES['passport']['name']; 
     $phototype = $_FILES['passport']['type'];
@@ -59,11 +58,11 @@
             }
             else{
               
-              $insert = "INSERT INTO studentdata (fname, email, dob, gender, phone, pword, address, state, course, passport, bio) VALUES ('$fname', '$email', '$dob', '$gender', '$phone', '$pword3', '$address', '$state', '$course', '$filepath', '$bio')";
+              $insert = "INSERT INTO studentdata (fname, email, dob, gender, phone, pword, address, state, course, passport, bio, status) VALUES ('$fname', '$email', '$dob', '$gender', '$phone', '$pword3', '$address', '$state', '$course', '$filepath', '$bio', '$status')";
               
               if($config->query($insert)===TRUE){
                 echo "<script> alert('$fname, you have successfully registered')</script>";
-                header('location:sign.html');
+                include('sign.php');
               }
               else{
                 echo "<script> alert('Ooops! Problem with registration, try again') </script>";
@@ -74,7 +73,7 @@
             }
           // }
       } 
-  } 
+  
  
 }  
  

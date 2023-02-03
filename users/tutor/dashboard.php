@@ -76,6 +76,16 @@ $row = $result -> fetch_array();
           </div>
         </a>  
 
+        <a href="staff.php">
+          <div class="card-single">
+            <div>
+              <h1>Staff</h1>
+              <span>List of all staff in the hub</span>
+            </div>
+            <div><i class="fa-solid fa-user-tie fa-3x"></i></div>
+          </div>
+        </a>  
+
         <a href="assign.php">
           <div class="card-single">
             <div>
@@ -95,6 +105,16 @@ $row = $result -> fetch_array();
             <div><i class="fa-solid fa-magnifying-glass fa-3x"></i></div>
           </div>
         </a>  
+
+        <a href="schedule.php">
+          <div class="card-single">
+            <div>
+              <h1>View Schedule</h1>
+              <span>Keep track of the program for each day</span>
+            </div>
+            <div><i class="fa-solid fa-calendar-days fa-3x"></i></div>
+          </div>
+        </a>  
                
       </div>
      
@@ -106,6 +126,6 @@ $row = $result -> fetch_array();
   </section>  
 
   <script src="../.././js/carousel.js"></script>
-  
+  <script src="../.././js/theme.js"></script>
 </body>
 </html>
