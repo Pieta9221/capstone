@@ -1,11 +1,7 @@
 <?php
   
   include('./users/inc/connection.php');
-
-  
-  $config = new mysqli ($host, $user, $pwd, $database);
-  
-  
+ 
     $fname = $_POST['fname'];
     $email = $_POST['email'];
     $dob = $_POST['dob'];
@@ -41,11 +37,10 @@
        
       }
       else{
-        // if(empty($fname) || empty($email) || empty(dob) || empty(gender) || empty($gender) || empty($phone) || empty($address) || empty($state) || empty($course) || empty($bio) || empty($pword) || empty($pword2)){
-        //   $err = "Kindly fill all fields";
-        // } else{
+        
           if($pword != $pword2){
             echo "<script> alert('$fname, the passwords do not match!')</script>";
+            include('form.php');
           }
           else{
 
@@ -55,6 +50,7 @@
 
             if ($res->num_rows>0){
               echo "<script> alert('$fname, your data already exists!') </script>";
+              include('form.php');
             }
             else{
               
@@ -73,8 +69,8 @@
             }
           // }
       } 
+    }
+    
   
- 
-}  
  
 ?>

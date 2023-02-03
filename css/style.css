@@ -1122,6 +1122,10 @@ label span {
 .error {
   color: #ff0000;
 }
+.required:after {
+  content: " *";
+  color: #ff0000;
+}
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
