@@ -1,6 +1,7 @@
 <?php
   
   include('./users/inc/connection.php');
+  $config = new mysqli ($host, $user, $pwd, $database);
  
     $fname = $_POST['fname'];
     $email = $_POST['email'];
