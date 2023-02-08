@@ -3,6 +3,13 @@ session_start();
 // include_once("../session.php");
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
+include('../inc/connection.php');
+if(!isset($_SESSION['email'])){
+  header("location: ../../sign.php"); 
+  }
+  
+  ?>
+  <?php
 $email = $_SESSION['email'];
 $query  = "SELECT * FROM admindata WHERE email='$email'";
 $result = $conn->query($query);

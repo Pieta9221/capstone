@@ -2,6 +2,12 @@
 session_start();
 include('../inc/connection.php');
 $conn = new mysqli ($host, $user, $pwd, $database);
+if(!isset($_SESSION['email'])){
+  header("location: ../../sign.php"); 
+  }
+  
+  ?>
+  <?php
 $email = $_SESSION['email'];
 $query  = "SELECT * FROM studentdata WHERE email='$email'";
 $result = $conn->query($query);

@@ -3,6 +3,12 @@ session_start();
 // include_once("../session.php");
 
 include('../inc/connection.php');
+if(!isset($_SESSION['email'])){
+  header("location: ../../sign.php"); 
+  }
+  
+  ?>
+  <?php
 $conn = new mysqli ($host, $user, $pwd, $database);
 $email = $_SESSION['email'];
 $query  = "SELECT * FROM studentdata WHERE email='$email'";

@@ -2,7 +2,12 @@
 if(isset($_GET['id'])){
   include('../inc/connection.php');
   $conn = new mysqli ($host, $user, $pwd, $database);
+  if(!isset($_SESSION['email'])){
+    header("location: ../../sign.php"); 
+    }
     
+    ?>
+    <?php
   
     $id = $_GET['id'];
 
