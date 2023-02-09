@@ -759,7 +759,10 @@ swal-button--cancel:not([disabled]):hover {
   .recent .user-wrapper img {
     margin-right: 1rem;
   }
-
+  .table-responsive {
+    width: 100%;
+    overflow-x: scroll;
+  }
   .popup {
     max-width: 80%;
   }

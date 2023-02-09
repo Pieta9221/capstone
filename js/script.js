@@ -167,6 +167,7 @@ function showResult() {
   quiz_box.classList.remove("activeQuiz"); //hide quiz box
   result_box.classList.add("activeResult"); //show result box
   const scoreText = result_box.querySelector(".score_text");
+
   if (userScore >= 15) {
     // if user scored more than 15
     //creating a new span tag and passing the user score number and total question number
@@ -189,13 +190,16 @@ function showResult() {
   } else {
     // if user scored less than 5
     let scoreTag =
-      "<span>and sorry 😐, You got only <p>" +
+      "<p>and sorry 😐, You got only " +
       userScore +
-      "</p> out of <p>" +
+      " out of " +
       questions.length +
-      "</p></span>";
+      "</p>";
     scoreText.innerHTML = scoreTag;
   }
+
+  document.cookie = "quizscore = " + userScore;
+  // console.log(document.cookie);
 }
 
 function startTimer(time) {
@@ -252,5 +256,3 @@ function queCounter(index) {
     "</p> Questions</span>";
   bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
 }
-
-document.cookie = "quizscore = " + userScore;

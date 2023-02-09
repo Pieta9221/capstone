@@ -330,10 +330,12 @@ footer button.show {
 .result_box .complete_text {
   font-size: 20px;
   font-weight: 500;
+  text-align: center;
 }
 
-.result_box .score_text span {
+.result_box .score_text {
   display: flex;
+  text-align: center;
   margin: 10px 0;
   font-size: 18px;
   font-weight: 500;
@@ -386,13 +388,6 @@ footer button.show {
   display: none;
 }
 
-/* @media only screen and (max-width: 1200px) {
-  .info-box,
-  .quiz-box,
-  .result_box {
-    width: 60%;
-  }
-} */
 @media only screen and (max-width: 768px) {
   .info-box,
   .quiz-box,

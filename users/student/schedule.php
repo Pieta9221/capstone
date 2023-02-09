@@ -14,9 +14,11 @@ $query  = "SELECT * FROM studentdata WHERE email='$email'";
 $result = $conn->query($query);
 $row = $result -> fetch_array();
 if(empty($row['regnum'])){
-  include("access.php");
-} elseif($row['status'] == "Suspended"){  
-  include("suspend.php");  
+  header("location: access.php"); 
+  
+} elseif($row['status'] == "Suspended"){ 
+  header("location: suspend.php"); 
+   
 } else{ 
   
 

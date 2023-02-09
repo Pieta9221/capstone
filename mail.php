@@ -12,7 +12,7 @@
     $message = $_REQUEST['message'];
 
     $adminemail = "mercy_nwaodu@yahoo.com";
-    $send = mail($adminemail, $message, "From: ".$email);
+    $send = mail($adminemail, $name, $message, "From: ".$email);
 
     if($send){
       echo "<script> alert('$name, your mail has been successfully sent')</script>";

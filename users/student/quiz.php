@@ -15,7 +15,7 @@ $row = $result -> fetch_array();
 
 
 if(!empty($row['quizscore'])){
-    include("quiz2.php");
+    header("location:quiz2.php");
   } else{  
   
    ?> 
@@ -76,7 +76,7 @@ if(!empty($row['quizscore'])){
             <div class="total_que">
                 <!-- Here I've inserted Question Count Number from JavaScript -->
             </div>
-            <button class="next_btn">Next Que</button>
+            <button class="next_btn">Next</button>
         </footer>
     </div>
 
@@ -119,8 +119,8 @@ if(!empty($row['quizscore'])){
 <?php 
 
 if(isset($_POST['add'])){
-    $_COOKIE["quizscore"];
-    $quizscore = $_POST["quizscore"]; 
+    
+    $quizscore = $_COOKIE["quizscore"];
     $insert = "UPDATE studentdata SET quizscore = '$quizscore' WHERE email='$email'";
     $res = $conn->query($insert);
     if($res){

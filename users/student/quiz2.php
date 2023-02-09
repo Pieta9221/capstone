@@ -21,7 +21,7 @@ $row = $result -> fetch_array();
     <main>
       <div class="rec">
         <div class="card-header">
-          <h2>Admission Status</h2>
+          <h2>Oops!</h2>
         </div>
             
         <div class="table-responsive">
