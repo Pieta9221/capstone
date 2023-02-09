@@ -29,6 +29,7 @@
     
     <div class="sidebar-menu">
       <ul>
+        <br>
         <li><a href="dashboard.php?" class="<?php echo str_ends_with($url, '/admin/dashboard.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-gauge fa-lg"></i></span><span>Dashboard</a></li>
         <li><a href="profile.php" class="<?php echo str_ends_with($url, '/admin/profile.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-user fa-lg"></i></span><span>My Profile</a></li>
         <li><a href="settings.php" class="<?php echo str_ends_with($url, '/admin/settings.php') ? 'active' : '' ?>"><span><i class="fa-solid fa-gears fa-lg"></i></span><span>Settings</a></li>

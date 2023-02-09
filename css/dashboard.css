@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   height: 90px;
-  padding: 2rem 1rem 4rem 1rem;
+  padding: 2.5rem 1rem 4rem 1rem;
   color: var(--color-dark);
 }
 
@@ -535,11 +535,11 @@ input:-webkit-autofill:active {
 .popup {
   background: #fff;
   border-radius: 5px;
-  width: 55%;
+  /* width: 55%; */
   position: relative;
   transition: all 5s ease-in-out;
   margin: 120px auto;
-  max-width: 400px;
+  max-width: 300px;
   padding: 1.5rem;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
@@ -742,6 +742,9 @@ swal-button--cancel:not([disabled]):hover {
   .form {
     max-width: 75%;
   }
+  .popup {
+    max-width: 70%;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -757,9 +760,10 @@ swal-button--cancel:not([disabled]):hover {
     margin-right: 1rem;
   }
 
-  /* td{  
-    padding: 0.3rem 0rem;
-    font-size: 0.8rem;
-    
+  .popup {
+    max-width: 80%;
+  }
+  /* .user-wrapper img {
+    display: none;
   } */
 }

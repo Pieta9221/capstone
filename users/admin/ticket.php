@@ -79,7 +79,7 @@ if(isset($_GET['ticketid'])){
 
               <tr>
                 <td>Reply:</td>
-                <td><textarea name="reply" rows="5" cols="30"></textarea></td>
+                <td><textarea name="reply" rows="5" cols="15"></textarea></td>
               </tr>
              
             

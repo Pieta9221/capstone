@@ -252,3 +252,5 @@ function queCounter(index) {
     "</p> Questions</span>";
   bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
 }
+
+document.cookie = "quizscore = " + userScore;

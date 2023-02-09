@@ -89,11 +89,11 @@ if(!empty($row['quizscore'])){
         <div class="score_text">
             <!-- Here I've inserted Score Result from JavaScript -->
         </div>
-        <form>
+        <form method="POST">
             <div class="buttons">
                 <button class="restart nil">Replay Quiz</button>
-                <a href="dashboard.php">
-                <button type="submit" class="quit">Quit Quiz</button></a>
+               
+                <button type="submit" name="add" class="quit">Quit Quiz</button>
             </div>
         </form>
         
@@ -116,3 +116,19 @@ if(!empty($row['quizscore'])){
 <?php
   }
 ?>  
+<?php 
+
+if(isset($_POST['add'])){
+    $_COOKIE["quizscore"];
+    $quizscore = $_POST["quizscore"]; 
+    $insert = "UPDATE studentdata SET quizscore = '$quizscore' WHERE email='$email'";
+    $res = $conn->query($insert);
+    if($res){
+        header("location: dashboard.php");
+    }
+    else{
+        echo "<script> alert('Oop!') </script>";
+    }
+
+}
+?> 
