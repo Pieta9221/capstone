@@ -62,7 +62,7 @@ $query2  = "SELECT * FROM studentdata ORDER BY fname ASC";
                 echo "<td>".$row['status']."</td>";
                 echo "<td>". '<a href="studentprofile.php?id='.$row['id']. '"class="btn" > <i class="fa-solid fa-eye"></i></a>'."</td>";
                 if($row['status'] == "Admitted"){
-                echo "<td>". '<a href="revoke.php?regnum='.$row['regnum']. '"class="btn" > <i class="fa-solid fa-square-xmark"></i> Suspend</a>'."</td>";
+                echo "<td>". '<a href="revoke.php?regnum='.$row['regnum']. '"class="btn" ><i class="fa-solid fa-square-xmark"></i> Suspend</a>'."</td>";
                 } elseif($row['status'] == "Pending"){
                   echo "<td>". '<a href="revoke.php?id='.$row['id']. '"class="btn" > <i class="fa-solid fa-square-xmark"></i> Revoke</a>'."</td>";
                   echo "<td>". '<a href="admit.php?id='.$row['id'].'"class="btn"> <i class="fa-solid fa-check"></i> Admit</a>'."</td>";
